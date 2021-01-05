@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 2 Example Code</title> 
+
+<style> 
+body {
+    background-color: #b0c4de;
+}
+</style>
+
+<script>
+// javaScript
+</script>
+
+</head>
+
+<body>
+<h2>Welcome to my Project 2 Example code page!</h2>
+
+<p id = "born"></p>
+
+<p id = "howOld"></p>
+	
+<script>	
+	// Creates a prompt box and converts the input into a number
+	var numTest = parseFloat(prompt("Please enter the year you were born.", "1492"));
+	
+	// Outputs the result in the form of a sentence.
+	document.getElementById("born").innerHTML = "You were born in " + numTest + ".";
+	
+	// Calculates age and displays the result
+	var age = 2015 - numTest
+	document.getElementById("howOld").innerHTML = "You are about " + age + " years old.";
+</script>
+
+<footer>
+<small><i>Copyright &#169; 2018 PLong Heavy Industries</i></small>
+</footer>
+
+</body>
+</html>

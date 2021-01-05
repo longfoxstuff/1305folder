@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="num1"></p>
+
+<script>
+//comment
+function myFunction() {
+    var num1 = parseFloat(prompt("Please enter a number"));
+    var num2 = parseFloat(prompt
+    var sq;
+    var half;
+    var message;
+    
+    sq = num1 ^ 2;
+    half = num2 / 2;
+
+    document.getElementById("num1").innerHTML = "The first number you entered was " + num1 + ".";
+    document.
+    document.
+    document.
+    document.getElementById("message").innerHTML =
+        "Thank you!";
+    
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,906 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<meta name='generator' content='ExamView Pro 3.05 [WinNT 5.00 (2195)]'>
+	<title>CIS 105 Boolean Logic</title>
+	<STYLE TYPE="text/css">
+		.spacer { line-height:.7em; }
+		.title { font-size:13pt; font-weight:bold; font-family:"Times New Roman", "Times", serif;color:#000000; }
+		.qnumber { font-size:12pt; font-family:"Times New Roman", "Times", serif;color:#000000; text-indent:12pt; text-align:right; }
+	</STYLE>
+<script language='JavaScript1.1'>
+<!--
+	// Copyright (c) 2000 FSCreations, Inc.
+	var listMap = '1111111111111111';
+	var qtypeMap = '0000000000000000';
+	var ansMap = new Array(16);
+	ansMap[0] = 'F';
+	ansMap[1] = 'T';
+	ansMap[2] = 'F';
+	ansMap[3] = 'F';
+	ansMap[4] = 'T';
+	ansMap[5] = 'T';
+	ansMap[6] = 'F';
+	ansMap[7] = 'F';
+	ansMap[8] = 'T';
+	ansMap[9] = 'F';
+	ansMap[10] = 'T';
+	ansMap[11] = 'T';
+	ansMap[12] = 'T';
+	ansMap[13] = 'F';
+	ansMap[14] = 'T';
+	ansMap[15] = 'T';
+	function GradeIt(f)
+	{
+		var	studentName;
+		var	numBlank = 0;
+		var	numCorrect = 0;
+		var	numPossible = 0;
+		var	numSubjective = 0;
+		var	currentInstruction;
+		var	currentNarrative;
+		var	scorePercent;
+		var	index;
+		var	msg;
+		var	text;
+		var	i;
+		var	showNotes = false;
+		var	showRef = false;
+		var	numQuestions = 16;
+		var	numInstructions = 1;
+		var	numNarratives = 0;
+		var	prefixText = new Array(16);
+		var	numberText = new Array(16);
+		var	questionText = new Array(16);
+		var	answerText = new Array(16);
+		var	responseText = new Array(16);
+		var	notesText = new Array(16);
+		var	refText = new Array(16);
+		var	narrativeIndex = new Array(0);
+		var	narrativeText = new Array(0);
+		var	instructionIndex = new Array(1);
+		var	instructionText = new Array(1);
+		var listMap = '1111111111111111';
+		var	titleString = 'CIS 105 Boolean Logic';
+		var	titleStyle = 'font-size:13pt; font-weight:bold; font-family:"Times New Roman", "Times", serif;color:#000000;';
+		var	qnumberStyle = 'font-size:12pt; font-family:"Times New Roman", "Times", serif;color:#000000; text-indent:12pt; text-align:right;';
+		var	defaultStyle = 'font-size:12pt; font-family:"Times New Roman", "Times", serif;color:#000000;';
+		instructionText[0] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; ' +
+'color:#000000\'><b>True/False</b><br></span></div><div><span style=\'font-family:"Times New Roman", ' +
+'"Times", serif; font-size:12pt; color:#000000\'><i>Indicate whether the sentence or statement is true ' +
+'or false.</i></span></div>';
+		instructionIndex[0] = 0;
+		numberText[0] = '1.';
+		questionText[0] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 = ' +
+'4</span></div>';
+		answerText[0] = '<div class=\'default\'>F</div>';
+		numberText[1] = '2.';
+		questionText[1] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &gt; ' +
+'4</span></div>';
+		answerText[1] = '<div class=\'default\'>T</div>';
+		numberText[2] = '3.';
+		questionText[2] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &lt; ' +
+'4</span></div>';
+		answerText[2] = '<div class=\'default\'>F</div>';
+		numberText[3] = '4.';
+		questionText[3] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &lt;= ' +
+'4</span></div>';
+		answerText[3] = '<div class=\'default\'>F</div>';
+		numberText[4] = '5.';
+		questionText[4] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &gt;= ' +
+'4</span></div>';
+		answerText[4] = '<div class=\'default\'>T</div>';
+		numberText[5] = '6.';
+		questionText[5] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &lt;&gt; ' +
+'4</span></div>';
+		answerText[5] = '<div class=\'default\'>T</div>';
+		numberText[6] = '7.';
+		questionText[6] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &lt; 4 + ' +
+'3</span></div>';
+		answerText[6] = '<div class=\'default\'>F</div>';
+		numberText[7] = '8.';
+		questionText[7] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &lt;&gt; ' +
+'3 + 4</span></div>';
+		answerText[7] = '<div class=\'default\'>F</div>';
+		numberText[8] = '9.';
+		questionText[8] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>7 &gt;= 4 + ' +
+'3</span></div>';
+		answerText[8] = '<div class=\'default\'>T</div>';
+		numberText[9] = '10.';
+		questionText[9] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>(7 - 3) &lt;&gt; ' +
+'(4 * 1)</span></div>';
+		answerText[9] = '<div class=\'default\'>F</div>';
+		numberText[10] = '11.';
+		questionText[10] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>((7 -3) * 4) ' +
+'&gt; (7 - 3 * 4)</span></div>';
+		answerText[10] = '<div class=\'default\'>T</div>';
+		numberText[11] = '12.';
+		questionText[11] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>where x is ' +
+'7<br></span></div><div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; ' +
+'color:#000000\'><br></span></div><div><span style=\'font-family:"Times New Roman", "Times", serif; ' +
+'font-size:12pt; color:#000000\'>x &gt;= 3 + 4</span></div>';
+		answerText[11] = '<div class=\'default\'>T</div>';
+		numberText[12] = '13.';
+		questionText[12] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>where x is ' +
+'7<br></span></div><div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; ' +
+'color:#000000\'><br></span></div><div><span style=\'font-family:"Times New Roman", "Times", serif; ' +
+'font-size:12pt; color:#000000\'>x ^ 2 = 7 * x</span></div>';
+		answerText[12] = '<div class=\'default\'>T</div>';
+		numberText[13] = '14.';
+		questionText[13] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>(7 = 1) AND ' +
+'(7 &gt;= 1)</span></div>';
+		answerText[13] = '<div class=\'default\'>F</div>';
+		numberText[14] = '15.';
+		questionText[14] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>((6 + 4 - 7) ' +
+'&lt;&gt; 4) OR (9 &gt; 3)</span></div>';
+		answerText[14] = '<div class=\'default\'>T</div>';
+		numberText[15] = '16.';
+		questionText[15] = '<div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000\'>where x is ' +
+'7<br></span></div><div><span style=\'font-family:"Times New Roman", "Times", serif; font-size:12pt; ' +
+'color:#000000\'><br></span></div><div><span style=\'font-family:"Times New Roman", "Times", serif; ' +
+'font-size:12pt; color:#000000\'>(((3 + 4 &lt;&gt; 7) AND (2 ^ 3 &gt; x ^ 2)) OR (x &gt; ' +
+'1)</span></div>';
+		answerText[15] = '<div class=\'default\'>T</div>';
+
+		studentName = StripSpaces(f.student_name.value);
+
+		FixMTF(f);
+		index = 0;
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf(":") > 0) {
+				text = StripSpaces(GetResponse(index, f.elements[i]));
+				if (text.length == 0)
+					++numBlank;
+				++index;
+			}
+		}
+
+		if (studentName == "") {
+			alert("Student name cannot be blank.");
+			return(false);
+		}
+
+		if (numBlank > 0) {
+			if (numBlank == 1)
+				msg = "1 question";
+			else
+				msg = numBlank + " questions";
+			if (!confirm("You have not answered " + msg +
+				"  Are you sure you want to end the test?"))
+				return(false);
+		}
+
+		index = 0;
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf(":") > 0) {
+				text = GetResponse(index, f.elements[i]);
+				if (ansMap[index] == "") {
+					prefixText[index] = "<img src='boolean_practice_files/nograde.gif' align='middle'>";
+					++numSubjective;
+				} else {
+					isCorrect = ScoreAnswer(index, text);
+					if (isCorrect)
+						++numCorrect;
+					++numPossible;
+
+					prefixText[index] = BuildPrefixText(index, text, isCorrect);
+				}
+				responseText[index] = TranslateHtmlString(text);
+				++index;
+			}
+		}
+
+		if (showNotes) {
+			for (i=0; i < numQuestions; ++i) {
+				if (qtypeMap.charAt(i) == "2")
+					notesText[i] = FixMCNotes(notesText[i], responseText[i]);
+			}
+		}
+
+		if (numPossible > 0)
+			scorePercent = Math.round(100.0 * numCorrect / numPossible);
+		else
+			scorePercent = 0;
+
+		studentName = TranslateHtmlString(studentName);
+
+		document.writeln("<html>\n<head>");
+		document.writeln("<title>" + titleString + "</title>");
+		document.writeln("<style type='text/css'>");
+		document.writeln("\t.qnumber { " + qnumberStyle + " }");
+		document.writeln("\t.title { " + titleStyle + " }");
+		document.writeln("\t.default { " + defaultStyle + " }");
+		document.writeln("\t.spacer { line-height:.7em; }");
+		document.writeln("</style>\n</head>");
+		document.writeln("<body bgcolor='#FFFFFF' style='background-image:url(boolean_practice_files/header.gif); background-repeat:no-repeat'>");
+		document.writeln("<b>Name:</b> " + studentName + "<br>");
+		document.write("<b>Score:</b> " + numCorrect + " / " + numPossible +
+				" (" + scorePercent + "%)");
+		if (numSubjective > 0) {
+			document.write("&nbsp;&nbsp;&nbsp;&nbsp; [" + numSubjective + " subjective ");
+			if (numSubjective == 1)
+				document.write("question");
+			else
+				document.write("questions");
+			document.write(" not graded]");
+		}
+		document.writeln("<br><br>");
+		document.writeln("<div class='title'>" + titleString + "</div><br>");
+		document.writeln("<table align='left' width='100%' border=0 cellpadding=0 cellspacing=0>");
+
+		currentInstruction = 0;
+		currentNarrative = 0;
+		for (i=0; i < numQuestions; ++i) {
+			if (currentInstruction < numInstructions) {
+				if (instructionIndex[currentInstruction] == i) {
+					document.writeln("<tr><td colspan='3'><br>");
+					document.writeln(instructionText[currentInstruction]);
+					document.writeln("<div class='spacer'>&nbsp;</div>");
+					document.writeln("</td></tr>");
+					++currentInstruction;
+				}
+			}
+
+			if (currentNarrative < numNarratives) {
+				if (narrativeIndex[currentNarrative] == i) {
+					document.writeln("<tr><td></td><td></td><td>");
+					document.writeln(narrativeText[currentNarrative]);
+					document.writeln("<div class='spacer'>&nbsp;</div>");
+					document.writeln("</td></tr>");
+					++currentNarrative;
+				}
+			}
+
+			document.writeln("<tr valign='baseline'>");
+			document.writeln("<td>" + prefixText[i] + "</td>");
+			document.writeln("<td><p class='qnumber'>" + numberText[i] + "&nbsp;</p></td>");
+			document.writeln("<td width='100%'>" + questionText[i]);
+			document.writeln("<div style='font-size:2pt'></div><br>");
+			document.writeln("<table valign='baseline' cellpadding=0 cellspacing=0 border=0>");
+			if (listMap.charAt(i) != "1") {
+				document.writeln("<tr valign='baseline'><td><p class='default'><b>RESPONSE:&nbsp;</b></p></td>");
+				document.writeln("<td><p class='default'>" + responseText[i] + "</p></td></tr>");
+			}
+			document.writeln("<tr valign='baseline'><td><p class='default'><b>ANSWER:&nbsp;</b></p></td>");
+			document.writeln("<td>" + answerText[i] + "</td></tr>");
+			if (showNotes) {
+				document.writeln("<tr valign='baseline'><td><p class='default'><b>NOTES:&nbsp;</b></p></td>");
+				document.writeln("<td>" + notesText[i] + "</td></tr>");
+			}
+			if (showRef) {
+				document.writeln("<tr valign='baseline'><td><p class='default'><b>REF:&nbsp;</b></p></td>");
+				document.writeln("<td>" + refText[i] + "</td></tr>");
+			}
+			document.writeln("</table>");
+			document.writeln("<div class='spacer'>&nbsp;</div></td></tr>");
+		}
+
+		document.writeln("</table>");
+		document.writeln("<br clear='all'>");
+		document.writeln("<table align='left' width='100%' cellpadding=0 cellspacing=0 border=0>");
+		document.writeln("<tr><td colspan='2' bgcolor='#000000'><div style='font-size:1pt'>&nbsp;</div></td></tr>");
+		document.write("<tr><td valign='top'><a href='" + window.location.href + "'>");
+		document.writeln("<img src='boolean_practice_files/retake.gif' border=0 alt='Retake Test'></a></td>");
+		document.writeln("<td valign='top' align='right'>");
+		document.write("<a href='http://www.examview.com/studytip.html'>");
+		document.writeln("<img src='boolean_practice_files/help.gif' border=0 alt='Help'></a>");
+		document.writeln("</td></tr></table>");
+
+		document.writeln("</body>");
+		document.writeln("</html>");
+		document.close();
+
+		return(false);
+	}
+
+	function GetResponse(answerIndex, answer)
+	{
+		var	listIndex;
+		var	responseText;
+
+		if (listMap.charAt(answerIndex) == "1") {
+			listIndex = answer.selectedIndex;
+			responseText = answer.options[listIndex].text;
+		} else
+			responseText = answer.value;
+
+		return(responseText);
+	}
+
+	function ScoreAnswer(answerIndex, responseText)
+	{
+		var	listIndex;
+		var	answerText;
+
+		answerText = ansMap[answerIndex];
+		if (qtypeMap.charAt(answerIndex) == "4")
+			return(NumericCompare(responseText, answerText));
+		else if (qtypeMap.charAt(answerIndex) == "5")
+			return(MultiCompare(responseText, answerText));
+		else if (responseText.toUpperCase() == answerText.toUpperCase())
+			return(true);
+		else
+			return(false);
+	}
+
+	function BuildPrefixText(answerIndex, responseText, isCorrect)
+	{
+		var	text;
+		var	listIndex;
+
+		text = "<pre>"
+		if (isCorrect)
+			text += "<img src='boolean_practice_files/correct.gif' align='middle'>"
+		else
+			text += "<img src='boolean_practice_files/wrong.gif' align='middle'>"
+
+		if (listMap.charAt(answerIndex) == "1") {
+			if (responseText.length == 0)
+				responseText = " ";
+			text += "<u> " + responseText + " </u>";
+		}
+
+		text += "</pre>"
+		return(text);
+	}
+
+	function StripSpaces(s)
+	{
+		var	len;
+		var	i;
+
+		len = s.length;
+		for (i=len - 1; i >= 0 && s.charAt(i) == " "; --i)
+			len = i;
+
+		if (len == 0)
+			s = "";
+		else if (len != s.length)
+			s = s.substring(0, len);
+
+		return(s);
+	}
+
+	function TranslateHtmlString(text)
+	{
+		var	newText;
+		var	replaceString;
+		var	position;
+		var	length;
+		var	breakPos;
+		var	skipExtra;
+		var	i;
+
+		newText = "";
+		position = 0;
+		length = text.length;
+		while (position < length) {
+			skipExtra = 0;
+			breakPos = -1;
+			for (i=position; i < length && breakPos < 0; ++i) {
+				switch(text.charAt(i)) {
+					case '>':
+						replaceString = "&gt;";
+						breakPos = i;
+						break;
+					case '<':
+						replaceString = "&lt;";
+						breakPos = i;
+						break;
+					case '&':
+						replaceString = "&amp;";
+						breakPos = i;
+						break;
+					case '\r':
+						if ((i + 1) < length && text.charAt(i + 1) == '\n')
+							skipExtra = 1;
+						replaceString = "<br>";
+						breakPos = i;
+						break;
+					case '\n':
+						replaceString = "<br>";
+						breakPos = i;
+						break;
+					case ' ':
+						if ((i + 1 < length) && text.charAt(i + 1) == ' ') {
+							replaceString = "&nbsp;";
+							breakPos = i;
+						}
+						break;
+				}
+			}
+
+			if (breakPos < 0) {
+				newText += text.substring(position, length);
+				position = length;
+			} else {
+				if (breakPos > position)
+					newText += text.substring(position, breakPos);
+				newText += replaceString;
+				position = breakPos + 1 + skipExtra;
+			}
+		}
+
+		return(newText);
+	}
+
+	function FixMCNotes(notesText, studentText)
+	{
+		var	displayText;
+		var	searchText;
+		var	upperNotes;
+		var	charCode;
+		var	startIndex;
+		var	endIndex;
+
+		displayText = "";
+		if (studentText.length > 0 && notesText.length > 0) {
+			upperNotes = notesText.toUpperCase();
+			studentText = studentText.toUpperCase();
+			charCode = studentText.charCodeAt(0);
+			searchText = "/" + String.fromCharCode(charCode) + "/";
+			startIndex = upperNotes.indexOf(searchText);
+			if (startIndex >= 0) {
+				startIndex += searchText.length;
+				searchText = "/" + String.fromCharCode(charCode + 1) + "/";
+				endIndex = upperNotes.indexOf(searchText, startIndex);
+				if (endIndex < startIndex)
+					endIndex = notesText.length;
+
+				displayText = notesText.substring(startIndex, endIndex);
+			} else if (notesText.charAt(0) != "/")
+				displayText = notesText;
+		}
+
+		return(displayText);
+	}
+
+	function NumericCompare(s1, s2)
+	{
+		var	s1Sign;
+		var	s2Sign;
+		var	tempString;
+		var	decimalCount;
+		var	decimalPos;
+		var	numToDelete;
+		var	len;
+		var	ch;
+		var	i;
+
+		s1.toUpperCase();
+		s2.toUpperCase();
+		if (s1 == s2)
+			return(true);
+		else {
+			s1Sign = 1;
+			s2Sign = 1;
+
+			tempString = "";
+			for (i=0; i < s1.length; ++i) {
+				ch = s1.charAt(i);
+				if (ch == "-" && tempString.length == 0)
+					s1Sign = -1;
+				else if ((ch >= "0" && ch <= "9") || ch == ".")
+					tempString += ch;
+			}
+
+			s1 = tempString;
+
+			decimalCount = 0;
+			decimalPos = -1;
+			for (i=0; i < s1.length; ++i) {
+				if (s1.charAt(i) == '.') {
+					++decimalCount;
+					if (decimalPos < 0)
+						decimalPos = i;
+				}
+			}
+
+			if (decimalCount == 1 && decimalPos >= 0) {
+				len = s1.length;
+				for (i=len - 1; i >= decimalPos; --i) {
+					if (i == decimalPos || s1.charAt(i) == '0')
+						len = i;
+					else
+						break;
+				}
+
+				if (len < s1.length)
+					s1 = s1.substring(0, len);
+				if (s1.length == 0)
+					s1 = "0";
+			}
+
+			numToDelete = 0;
+			for (i=0; i < s1.length; ++i) {
+				if (s1.charAt(i) == "0")
+					++numToDelete;
+				else
+					break;
+			}
+
+			if (numToDelete > 0) {
+				if (numToDelete == s1.length)
+					--numToDelete;
+				if (numToDelete > 0)
+					s1 = s1.substring(numToDelete);
+			}
+
+			/////////////////////////////////////////////
+			tempString = "";
+			for (i=0; i < s2.length; ++i) {
+				ch = s2.charAt(i);
+				if (ch == "-" && tempString.length == 0)
+					s2Sign = -1;
+				else if ((ch >= "0" && ch <= "9") || ch == ".")
+					tempString += ch;
+			}
+
+			s2 = tempString;
+
+			decimalCount = 0;
+			decimalPos = -1;
+			for (i=0; i < s2.length; ++i) {
+				if (s2.charAt(i) == '.') {
+					++decimalCount;
+					if (decimalPos < 0)
+						decimalPos = i;
+				}
+			}
+
+			if (decimalCount == 1 && decimalPos >= 0) {
+				len = s2.length;
+				for (i=len - 1; i >= decimalPos; --i) {
+					if (i == decimalPos || s2.charAt(i) == '0')
+						len = i;
+					else
+						break;
+				}
+
+				if (len < s2.length)
+					s2 = s2.substring(0, len);
+				if (s2.length == 0)
+					s2 = "0";
+			}
+
+			numToDelete = 0;
+			for (i=0; i < s2.length; ++i) {
+				if (s2.charAt(i) == "0")
+					++numToDelete;
+				else
+					break;
+			}
+
+			if (numToDelete > 0) {
+				if (numToDelete == s2.length)
+					--numToDelete;
+				if (numToDelete > 0)
+					s2 = s2.substring(numToDelete);
+			}
+
+			if (s1Sign == s2Sign && s1 == s2)
+				return(true);
+		}
+
+		return(false);
+	}
+
+	function MultiCompare(responseText, answerText)
+	{
+		var	startIndex;
+		var	endIndex;
+		var	partialText;
+
+		responseText = responseText.toUpperCase();
+		answerText = answerText.toUpperCase();
+
+		startIndex = 0;
+		do {
+			endIndex = answerText.indexOf("\r", startIndex);
+			if (endIndex < 0)
+				partialText = answerText.substring(startIndex);
+			else
+				partialText = answerText.substring(startIndex, endIndex);
+
+			if (responseText == partialText)
+				return(true);
+
+			startIndex = endIndex + 1;
+		} while (endIndex > 0);
+
+		return(false);
+	}
+
+	function FixMTF(f)
+	{
+		var	text;
+		var	letter;
+		var	theList;
+		var	listIndex;
+		var	number;
+		var	i;
+
+		for (i=0; i < f.length; ++i) {
+			if (f.elements[i].name.indexOf("MTF:") == 0) {
+				number = parseInt(f.elements[i].name.substring(4), 10);
+
+				theList = f["MTF-" + number + "-1"];
+				if (theList) {
+					listIndex = theList.selectedIndex;
+					letter = theList.options[listIndex].text;
+				} else
+					letter = "";
+
+				text = StripSpaces(f["MTF-" + number + "-2"].value);
+				if (text == "")
+					f.elements[i].value = letter;
+				else
+					f.elements[i].value = letter + "," + text;
+			}
+		}
+	}
+
+	function AllowReset()
+	{
+		return(window.confirm("Do you want to clear all of your answers?"));
+	}
+
+// -->
+</script>
+<meta name="Microsoft Border" content="t, default">
+</head>
+<body onResize='if(document.layers && navigator.appVersion.indexOf("Win") < 0){history.go(0);}'
+bgcolor='#FFFFFF' style='background-image:url(boolean_practice_files/header.gif); background-repeat:no-repeat'><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="center"><font size="6"><strong>
+</strong></font><br>
+</p>
+<p align="center">&nbsp;</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<noscript>
+	<h3><font color='#FF0000'>Javascript not enabled</font></h3>
+</noscript>
+<script language='JavaScript'>
+<!--
+if (navigator.appName.indexOf("Netscape") >= 0) {
+	if (parseInt(navigator.appVersion.charAt(0)) < 4)
+		alert("This document requires Netscape Navigator version 4.0 or later.");
+} else if (navigator.appName.indexOf("Explorer") >= 0) {
+	if (parseInt(navigator.appVersion.charAt(0)) < 4)
+		alert("This document requires Internet Explorer version 4.0 or later.");
+}
+// -->
+</script>
+<form name='TestForm' onReset='return(AllowReset(this))'>
+<table align='left' width='100%' border=0 cellspacing=0>
+    <tr valign='top'>
+	<td>
+	    <div class='headerspacer'>&nbsp;</div>
+	    <b>Name:</b>&nbsp;<input type='text' name='student_name' size='30'><br>
+	    <div class='spacer'>&nbsp;</div>
+	    <br>
+	    <p class="title">CIS 105 Boolean Logic</p>
+	</td>
+    </tr>
+</table>
+<br clear='all'>
+<table align='left' width='100%' border=0 cellpadding=0 cellspacing=0>
+<!-- BEGIN: INSTRUCTION -->
+<tr valign='top'>
+	<td colspan='3'><br>
+<div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt;
+color:#000000'><b>True/False</b><br></span></div><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'><i>Indicate whether the sentence or statement is true
+or false.</i></span></div>
+<div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: INSTRUCTION -->
+<!-- BEGIN: QUESTION 805207986:1 -->
+<tr valign='baseline'>	<td>		<select name='TF:1' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>1.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7 =
+4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:1 -->
+<!-- BEGIN: QUESTION 805207986:2 -->
+<tr valign='baseline'>	<td>		<select name='TF:2' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>2.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&gt; 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:2 -->
+<!-- BEGIN: QUESTION 805207986:3 -->
+<tr valign='baseline'>	<td>		<select name='TF:3' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>3.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&lt; 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:3 -->
+<!-- BEGIN: QUESTION 805207986:4 -->
+<tr valign='baseline'>	<td>		<select name='TF:4' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>4.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&lt;= 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:4 -->
+<!-- BEGIN: QUESTION 805207986:5 -->
+<tr valign='baseline'>	<td>		<select name='TF:5' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>5.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&gt;= 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:5 -->
+<!-- BEGIN: QUESTION 805207986:6 -->
+<tr valign='baseline'>	<td>		<select name='TF:6' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>6.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&lt;&gt; 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:6 -->
+<!-- BEGIN: QUESTION 805207986:7 -->
+<tr valign='baseline'>	<td>		<select name='TF:7' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>7.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&lt; 4 + 3</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:7 -->
+<!-- BEGIN: QUESTION 805207986:8 -->
+<tr valign='baseline'>	<td>		<select name='TF:8' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>8.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&lt;&gt; 3 + 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:8 -->
+<!-- BEGIN: QUESTION 805207986:9 -->
+<tr valign='baseline'>	<td>		<select name='TF:9' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>9.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>7
+&gt;= 4 + 3</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:9 -->
+<!-- BEGIN: QUESTION 805207986:10 -->
+<tr valign='baseline'>	<td>		<select name='TF:10' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>10.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>(7 -
+3) &lt;&gt; (4 * 1)</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:10 -->
+<!-- BEGIN: QUESTION 805207986:11 -->
+<tr valign='baseline'>	<td>		<select name='TF:11' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>11.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>((7
+-3) * 4) &gt; (7 - 3 * 4)</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:11 -->
+<!-- BEGIN: QUESTION 805207986:12 -->
+<tr valign='baseline'>	<td>		<select name='TF:12' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>12.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>where
+x is 7<br></span></div><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'><br></span></div><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>x &gt;= 3 + 4</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:12 -->
+<!-- BEGIN: QUESTION 805207986:13 -->
+<tr valign='baseline'>	<td>		<select name='TF:13' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>13.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>where
+x is 7<br></span></div><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'><br></span></div><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>x ^ 2 = 7 * x</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:13 -->
+<!-- BEGIN: QUESTION 805207986:14 -->
+<tr valign='baseline'>	<td>		<select name='TF:14' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>14.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>(7 =
+1) AND (7 &gt;= 1)</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:14 -->
+<!-- BEGIN: QUESTION 805207986:15 -->
+<tr valign='baseline'>	<td>		<select name='TF:15' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>15.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>((6 +
+4 - 7) &lt;&gt; 4) OR (9 &gt; 3)</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:15 -->
+<!-- BEGIN: QUESTION 805207986:16 -->
+<tr valign='baseline'>	<td>		<select name='TF:16' align='top'>
+			<option value=' '> 
+			<option value='T'>T
+			<option value='F'>F
+		</select>
+	</td>	<td>		<p class='qnumber'>16.&nbsp;</p>	</td>	<td width='100%'><div><span style='font-family:"Times New Roman", "Times", serif; font-size:12pt; color:#000000'>where
+x is 7<br></span></div><div><span style='font-family:"Times New Roman", "Times", serif;
+font-size:12pt; color:#000000'><br></span></div><div><span style='font-family:"Times New Roman",
+"Times", serif; font-size:12pt; color:#000000'>(((3 + 4 &lt;&gt; 7) AND (2 ^ 3 &gt; x ^ 2)) OR (x
+&gt; 1)</span></div><div class='spacer'>&nbsp;</div>
+	</td>
+</tr>
+<!-- END: QUESTION 805207986:16 -->
+</table><BR CLEAR='ALL'>
+<BR>
+<BR>
+<TABLE ALIGN='LEFT' WIDTH='100%' CELLPADDING='0' CELLSPACING='0' BORDER='0'>
+<TR>
+    <TD COLSPAN='2' BGCOLOR='#000000'>
+    <DIV STYLE='font-size:1pt'>&nbsp;</DIV>
+    </TD>
+</TR>
+<TR>
+    <TD><A HREF="" onClick="return(GradeIt(document.forms[0]))">
+	   <IMG SRC='boolean_practice_files/chkwork.gif' BORDER=0 ALT='Check Your Work' width="189" height="31"></A>
+	&nbsp;&nbsp;&nbsp;
+	<A HREF='javascript:document.forms[0].reset()'>
+	   <IMG SRC='boolean_practice_files/reset.gif' BORDER=0 ALT='Reset' width="101" height="31"></A>
+    </TD>
+    <TD ALIGN='RIGHT'>
+	<A HREF='http://www.examview.com/studytip.html'>
+	    <IMG SRC='boolean_practice_files/help.gif' BORDER=0 ALT='Help' width="95" height="31"></A>
+    </TD>
+</TR>
+</TABLE>
+ 
+</form><!--msnavigation--></td></tr><!--msnavigation--></table></body></html>
