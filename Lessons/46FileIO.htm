@@ -1,0 +1,178 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Lesson Plan</title>
+<meta name="Microsoft Theme" content="none, default">
+<meta name="Microsoft Border" content="b">
+</head>
+
+<body><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<h2>CIST 1305 Lesson 46</h2>
+<div align="left">
+  <table border="1" height="12" id="AutoNumber1">
+    <tr>
+      <td width="109" height="42" valign="top"><b>Preparation for Learning</b></td>
+      <td height="42">&nbsp;</td>
+      <td><b>Steps:</b>
+        <ul>
+          <li>We worked a bit with data statements but remember their main 
+        limitation</li>
+          <li>Data statements are in the body of the program and are not easily 
+        changed in a compiled program</li>
+          <li>It's much easier to work with data in a separate data file</li>
+          <li>Today and tomorrow we will work with sequential files</li>
+          <li>Sequential <a href="http://dictionary.oed.com/cgi/entry/00220269">
+        definition</a></li>
+          <li>These are different from random files which are way above and beyond 
+        what we can cover in this course</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="109" height="6" valign="top"><b>Focal Point</b></td>
+      <td height="6">.</td>
+      <td><b>File I/O - Sequential</b></td>
+    </tr>
+    <tr>
+      <td width="109" height="9" valign="top"><b>Learning</b></td>
+      <td height="9" valign="top">.</td>
+      <td>
+      <p>The primary commands for using sequential files are the following in 
+      order of use:<p><b>Open</b> - Opens the file for use.&nbsp; You specify 
+      whether it's for input or output<p><b>Print</b> - Writes data to the file
+        in a format much like printing to the screen<p><b>WRITE</b> - Inserts commas between items and quotation marks around strings<br>
+        as they are written. WRITE writes values to a file in a form that can<br>
+        be read by the INPUT statement.<p>
+      <b>Input</b> - Reads data from the file<p><b>EOF</b> - A condition in 
+      which the end of the file has been reached<p><b>Close</b> - Closes the 
+      file so it cannot be used again until it is re-opened<p>This is a small 
+      program which reads 5 numbers from the user and writes them to a file<blockquote>
+      <p style="margin-top: 0; margin-bottom: 0">REM Buddy Raper<br>
+      REM 11 December 2001<br>
+      REM This program accepts 5 numbers from the user and<br>
+      REM writes them to a file named user.txt<br>
+      <br>
+      DIM i AS INTEGER, number AS SINGLE<br>
+      <br>
+      CLS<br>
+      PRINT &quot;You will be asked for five numbers which will be written&quot;<br>
+      PRINT &quot;to the file user.txt&quot;<br>
+      PRINT<br>
+      <br>
+      OPEN &quot;user.txt&quot; FOR OUTPUT AS #1<br>
+      <br>
+      FOR i = 1 TO 5<br>
+&nbsp;&nbsp;&nbsp;&nbsp; INPUT &quot;A number: &quot;, number<br>
+&nbsp;&nbsp;&nbsp;&nbsp; PRINT #1, number<br>
+      NEXT i<br>
+&nbsp;<p style="margin-top: 0; margin-bottom: 0">CLOSE #1<p style="margin-top: 0; margin-bottom: 0">
+        <br>
+        END<br>
+&nbsp;</blockquote>
+      <p>The <b>most interesting lines</b> are the OPEN and the Print #1.<p>The
+      <b>open line</b> specifies &quot;user.txt&quot;, a literal string, as the filename 
+      to open.&nbsp; By default the path is the same as that of QBasic.&nbsp; 
+      This is called a relative path.&nbsp; If you wanted to specify that this 
+      would be on the floppy disk you would use &quot;<a href="file:///a:/user.txt">a:\user.txt</a>&quot; 
+      instead.<p>The <b>Print #1</b> line specifies that the output of the print 
+      statement should go to the file instead of the screen.<p>If you want to <b>
+      read data from the file </b>instead of writing to it you will use a very 
+      similar structure.&nbsp; This program reads that data we wrote in the 
+      previous program and totals it up.<blockquote>
+      <p>REM Buddy Raper<br>
+      REM 11 December 2001<br>
+      REM This program reads 5 numbers from the file user.txt and<br>
+      REM totals them up on-screen.<br>
+      <br>
+      DIM i AS INTEGER, number AS SINGLE, total AS SINGLE<br>
+      <br>
+      total = 0<br>
+      <br>
+      CLS<br>
+      PRINT &quot;Reading data from the file user.txt&quot;<br>
+      PRINT<br>
+      <br>
+      OPEN &quot;user.txt&quot; FOR INPUT AS #1<br>
+      <br>
+      FOR i = 1 TO 5<br>
+      INPUT #1, number<br>
+      PRINT number<br>
+      total = total + number<br>
+      NEXT i<br>
+      <br>
+      PRINT<br>
+      PRINT &quot;The total is&quot;; total<br>
+      <br>
+      CLOSE #1<br>
+      <br>
+      END</blockquote>
+      <p>This <b>structure</b> is very similar to the first except we're 
+      INPUT'ing instead of OUTPUT'ing.<p>One other <b>keyword of note</b> is 
+      WRITE.&nbsp; WRITE works much like PRINT but it inserts commas between 
+      items and quotation marks around strings as they are written. WRITE writes 
+      values to a file in a form that can be read by the INPUT statement.&nbsp; 
+      WRITE is often considered more appropriate for sequential file creation 
+      that PRINT because it does so much formatting automatically.<p>&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="109" height="3" valign="top"><b>Homework</b></td>
+      <td height="3" valign="top">.</td>
+      <td>&nbsp;<FORM METHOD="POST" action="../_vti_bin/shtml.dll/lessons/46FileIO.htm" webbot-action="--WEBBOT-SELF--">
+<!--webbot bot="SaveResults" startspan S-Email-Format="TEXT/PRE"
+S-Email-Address="braper@ngtcollege.org" B-Email-Label-Fields="TRUE"
+B-Email-Subject-From-Field="FALSE" S-Email-Subject="CIS 105 Lesson 46 File I/O"
+S-Builtin-Fields --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot
+bot="SaveResults" endspan i-checksum="43374" --><P>
+Please provide the following contact information:</P>
+<BLOCKQUOTE>
+<TABLE>
+<TR>
+<TD ALIGN="right">
+<EM>Name</EM></TD>
+<TD>
+<INPUT TYPE=TEXT NAME="Contact_FullName" SIZE=35> </TD>
+</TR>
+<TR>
+<TD ALIGN="right">
+<EM>E-mail</EM></TD>
+<TD>
+<INPUT TYPE=TEXT NAME="Contact_Email" SIZE=25> </TD>
+</TR>
+</TABLE>
+</BLOCKQUOTE>
+<P>
+Write a program to display all the items in the file user.txt which are larger 
+than 3.</P>
+<BLOCKQUOTE>
+<P>
+<TEXTAREA NAME="1" ROWS=12 COLS=63></TEXTAREA>
+<BR>
+</P>
+</BLOCKQUOTE>
+<P>
+Using Notepad create a file of animal names.&nbsp; Allow the user to enter an 
+animal name and allow the program to tell the user the line number of that name 
+in the file.&nbsp; (Paste the contents of your animal list at the bottom of your 
+program in the submission box.)</P>
+<BLOCKQUOTE>
+<P>
+<TEXTAREA NAME="2" ROWS=12 COLS=63></TEXTAREA>
+<BR>
+</P>
+</BLOCKQUOTE>
+<p>
+<INPUT TYPE=SUBMIT VALUE="Submit Form">
+<INPUT TYPE=RESET VALUE="Reset Form"> </p>
+</FORM>
+      <p>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td></td></tr><!--msnavigation--></table></body>
+
+</html>

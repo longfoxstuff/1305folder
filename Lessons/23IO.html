@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>23 IO&#59; 1305</title>
+
+<style>
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width:100%;
+	margin:auto;
+	background-color:#074C8F; /* blue */
+	font-size:6px;	
+}
+
+.content {
+	margin-left:30px;
+	margin-top:20px;
+	margin-right:30px;
+	margin-bottom:20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#ffffff;	
+}
+
+.icon {
+	width:92%;
+	margin:auto;
+	text-align:center;	
+}
+
+.menu {
+	width:92%;
+	margin:auto;
+	text-align:center;
+	font-size:20px;
+	background-color:#E6F6F0;
+}    
+
+.outerTable  {
+	margin:auto;
+	width:98%;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.innerTable  {
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+td {
+	vertical-align:top;
+}
+
+.footer {
+	width:92%;
+	margin:auto;
+	color:#074C8F;
+	text-align:center;
+	font-size:11px;
+	font-style:italic;
+}
+
+hr {
+	width:92%;
+	margin:auto;
+}  
+
+ul, li {
+	margin-left: 20px;
+}
+
+h1 {
+	text-align:center;
+	font-size:22px;
+}
+
+h2,h3 {
+	text-align:center;
+	font-size:18px;
+}
+
+nav {
+    text-align: center;
+}
+ 
+</style>
+
+</head>
+
+<body>
+<div class="container">
+	<a id="anchor23"></a><p>&nbsp;</p>
+<div class="content">
+<div class="icon">
+	<p style="font-size:10px;">&nbsp;</p>
+	<p><img src="../images/27_2012-NGTC-Logo-small.jpg" 
+			alt="NGTC logo" usemap="#MapNGTC" 
+			style="height:96px; width:300px;" />
+      <map name="MapNGTC">
+        <area shape="rect" coords="-1,1,299,96" href="https://www.northgatech.edu/default.aspx" 
+        	target="new" alt="Link to North Georgia Technical College">
+      </map>	  
+</div> <!-- end icon div -->
+
+<nav>
+	<a href="../index.html">Home</a> &nbsp;&middot; &nbsp;
+	<a href="../syllabus.html">Syllabus</a> &nbsp;&middot; &nbsp;
+	<a href="../schedule.html">Schedule</a> &nbsp;&middot; &nbsp;
+	<a href="../links.html">Links</a> &nbsp;&middot; &nbsp;
+	<a href="../homework.html">Homework</a>
+</nav>
+<hr>
+<h2>CIST 1305 Lesson 23 Input&#47;Output &#40;IO&#41;</h2>
+
+<table id="outerTable" style="width:96%; margin:auto; border:1px solid black;">
+  
+	<tr>
+      <td style="width:15%; border:1px solid black;"><strong>&nbsp;Preparation<br />&nbsp;for Learning</strong></td>
+      <td style="width:2%; border:1px solid black;">&nbsp;</td>
+      <td style="width:83%; border:1px solid black;"><strong>&nbsp;Steps&#58;</strong>
+		<ul>
+			<li>Think about different ways you receive input</li>
+			<li style="margin-left:60px;">Touch</li>
+			<li style="margin-left:60px;">Sight</li>
+			<li style="margin-left:60px;">Hearing</li>
+			<li style="margin-left:60px;">Smell</li>
+			<li style="margin-left:60px;">Taste</li>
+			<li>Think about different ways you give output</li>
+			<li style="margin-left:60px;">Verbal</li>
+			<li style="margin-left:60px;">Body language</li>
+			<li style="margin-left:60px;">Facial expressions</li>
+			<li style="margin-left:60px;">Written words</li>
+		</ul></td>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Focal Point</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Elements of Programming - Interactive Input and Output</strong></td>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Learning</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Simple INPUT&#58;</strong>
+		<p>&nbsp;Different types of simple JavaScript input&#58;
+		<ul>
+			<li>User Input - requires input from the user</li>
+			<li style="margin-left:50px;">Prompt box</li>
+			<li style="margin-left:50px;">Confirm Box<br /> 
+				&nbsp;&nbsp;&nbsp;<a target="new" href="../Examples/23_Input_ConfirmBox_Comments_Example.html">Confirm Box Example</a></li>	
+			<li>Comments - Coder Input</li>
+			<li style="margin-left:50px;">One line of comment begins with &#47;&#47;</li>
+			<li style="margin-left:50px;">Multiple lines of comment begins with &#47;&#42; and end with &#42;&#47;<br />
+				&nbsp;&nbsp;&nbsp;<a target="new" href="../Examples/23_Input_ConfirmBox_Comments_Example.html">Comments Example</a> 
+				&#45; view page source.</li>
+		</ul>
+      <p><strong>&nbsp;Simple OUTPUT&#58;</strong></p>
+	  <p>&nbsp;PRINT &#40;PRINT to screen&#41;</p>
+		<ul>
+			<li>To view the ouput &#40;PRINT to screen&#41;, we use a combination of&#58;</li>
+			<li style="margin-left:50px;"><code>document.getElementById&#40;&#34;demo&#34;&#41;.innerHTML &#61;</code></li>
+			<li style="margin-left:50px;">and <code>&lt;p id="demo"&gt;&lt;&#47;p&gt;</code><br />
+				&nbsp;&nbsp;&nbsp;<a target="new" href="../Examples/23_Output_Example.html">Output Example</a>
+			</li>
+		</ul>
+	<p>&nbsp;Alert Box. (An Alert box also requires USER input.)</p>
+	<p style="margin-left:110px;">&nbsp;&nbsp;&nbsp;
+		<a target="new" href="../Examples/23_Output_AlertBox_Example.html">Alert Box Example</a></p>	
+	<p style="font-size:4px;">&nbsp;</p></td>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Homework</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;">&nbsp;</td>
+    </tr>
+  </table>
+<p style="text-align:center; font-size:13px;"><a href="23IO.html#anchor23">Link to top of page</a></p>
+
+<footer>
+<small><i>Copyright &#169; 2018 PLong Heavy Industries</i></small>
+</footer>
+</div> <!-- end content div -->
+<p>&nbsp;</p>
+</div> <!-- end container div -->
+</body>
+</html>

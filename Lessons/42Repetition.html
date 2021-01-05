@@ -1,0 +1,229 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Lesson Plan</title>
+<meta name="Microsoft Theme" content="none, default">
+<meta name="Microsoft Border" content="b">
+</head>
+
+<body bgcolor="#FFFFCC"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<h2>CIST 1305 Lesson 42</h2>
+<div align="left">
+  <table border="1" height="12" id="AutoNumber1">
+    <tr>
+      <td width="109" height="42" valign="top"><b>Preparation for Learning</b></td>
+      <td height="42">&nbsp;</td>
+      <td><b>Steps:</b><ul>
+		<li>Where do you store your data?</li>
+		<li>On the local hard drive?</li>
+		<li>On a floppy?</li>
+		<li>On your folder on Arthur?</li>
+		<li>We often store our data where it's convenient</li>
+		</ul>
+		</td>
+    </tr>
+    <tr>
+      <td width="109" height="6" valign="top"><b>Focal Point</b></td>
+      <td height="6">.</td>
+      <td><b>Flow Control - Repetition</b></td>
+    </tr>
+    <tr>
+      <td width="109" height="9" valign="top"><b>Learning</b></td>
+      <td height="9" valign="top">.</td>
+      <td>
+      <p><b>QBasic can get data from several sources</b> including the user and 
+      external files.&nbsp; Sometimes, however, the program will use static data 
+      inside the program itself.&nbsp; This might be a string of notes to play a 
+      tune.&nbsp; It might be color sequences.&nbsp; It could be pretty much 
+      anything the programmer wants to store &quot;permanently.&quot;&nbsp; (I say 
+      permanently because the program actually has to be modified to change the 
+      data if it's stored this way.)<p><b>Storing data in the program</b> is 
+      done using DATA statements.&nbsp; These are usually at or near the end of 
+      the program.&nbsp; The data is accessed by using the READ command which 
+      assigns the values to variables during the execution of a program.<p>David 
+      I. Schneider's &quot;<a href="http://vig.prenhall.com/catalog/academic/product/1,4096,0139738762.html,00.html">QBASIC 
+      with an Introduction to Visual Basic 5.0</a>&quot; on page 59, has a good 
+      discussion of this topic.<blockquote>
+        <p><font face="Courier New">DATA statements store values to be assigned 
+        to variables by READ statements during the execution of a program.&nbsp; 
+        If a DATA statement contains more than one item of data, the items are 
+        separated by commas.&nbsp; Examples of DATA statements are</font></p>
+        <blockquote>
+          <p><font face="Courier New">DATA &quot;Mike Jones&quot;, 7.35, 35</font></p>
+          <p><font face="Courier New">DATA &quot;John Smith&quot;, 6.75, 33</font></p>
+        </blockquote>
+        <p><font face="Courier New">These six items of data could have been 
+        placed in one DATA statement or in six different DATA statements.&nbsp; 
+        The items of data will be assigned to variables one at a time in the 
+        order they appear in the DATA statements.&nbsp; That is, &quot;Mike Jones&quot; 
+        will be the first value assigned to a variable.&nbsp; After all the 
+        items from the first DATA statement have been assigned to variables, 
+        subsequent requests for values will be read from the next DATA 
+        statement.&nbsp; Although DATA statements can appear anywhere in a 
+        program, they are usually placed at the end, just before the END 
+        statement.&nbsp; This makes them easy to find and modify.&nbsp; If <i>
+        var</i> is a variable, then the statement</font></p>
+        <blockquote>
+          <p><font face="Courier New">READ <i>var</i></font></p>
+        </blockquote>
+        <p><font face="Courier New">causes the program to look in the DATA 
+        statements for the next available item of data and assign it to the 
+        variable <i>var.</i></font></p>
+      </blockquote>
+      <p>This is an example of a program which reads and prints some info from 
+      DATA statements.</p>
+      <blockquote>
+        <p>REM plong<br>
+        REM Data Statement example without loop<br>
+        REM 6-5-2005<br>
+        <br>
+        DIM username AS STRING, score AS SINGLE, age AS INTEGER<br>
+        <br>
+        CLS<br>
+        <br>
+        REM This is a header<br>
+        PRINT &quot;User&quot;, &quot; Score&quot;, &quot; Age&quot;<br>
+        <br>
+        READ username, score, age<br>
+        PRINT username, score, age<br>
+        <br>
+        READ username<br>
+        READ score<br>
+        READ age<br>
+        PRINT username, score, age<br>
+        <br>
+        DATA &quot;Mike Jones&quot;, 7.35, 35<br>
+        DATA &quot;John Smith&quot;, 6.75, 33<br>
+        <br>
+        END</p>
+      </blockquote>
+      <p>Notice that this contains several READ statements.&nbsp; It could have 
+      been done with a minimum of two READS, but the latter set is for example.</p>
+      <p>A problem like this is easily solved without a loop, but it would 
+      become cumbersome if there were several thousand, or even a hundred sets 
+      of data.&nbsp; A loop will make this program much improved.</p>
+      <p>Since we know how much data is in the program we can use a for next 
+      loop.</p>
+      <blockquote>
+        <p>REM plong<br>
+        REM Data Statement example - For-Next loop<br>
+        REM 6-5-2005<br>
+        <br>
+        DIM username AS STRING, score AS SINGLE, age AS INTEGER<br>
+        DIM i AS INTEGER<br>
+        <br>
+        CLS<br>
+        <br>
+        REM This is a header<br>
+        PRINT &quot;User&quot;, &quot; Score&quot;, &quot; Age&quot;<br>
+        <br>
+        FOR i = 1 TO 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp; READ username, score, age<br>
+&nbsp;&nbsp;&nbsp;&nbsp; PRINT username, score, age<br>
+        NEXT i<br>
+        <br>
+        DATA &quot;Mike Jones&quot;, 7.35, 35<br>
+        DATA &quot;John Smith&quot;, 6.75, 33<br>
+        <br>
+        END</p>
+      </blockquote>
+      <p>This will be much more manageable.&nbsp; Play with it to see what 
+      happens if you try to read more data than is available.</p>
+      <p>If we had an undetermined amount of data we wouldn't want to use a 
+      For-Next loop.&nbsp; A better choice would be the Do-While or the 
+      Do-Until.</p>
+      <blockquote>
+        <p>REM plong<br>
+        REM Data Statement example without loop<br>
+        REM 6-5-2005<br>
+        <br>
+        DIM username AS STRING, score AS SINGLE, age AS INTEGER<br>
+        DIM i AS INTEGER<br>
+        <br>
+        CLS<br>
+        <br>
+        REM This is a header<br>
+        PRINT &quot;User&quot;, &quot; Score&quot;, &quot; Age&quot;<br>
+        <br>
+        READ username, score, age<br>
+        <br>
+        DO<br>
+&nbsp;&nbsp;&nbsp;&nbsp; PRINT username, score, age<br>
+&nbsp;&nbsp;&nbsp;&nbsp; READ username, score, age<br>
+        LOOP UNTIL username = &quot;EOD&quot;<br>
+        <br>
+        DATA &quot;Mike Jones&quot;, 7.35, 35<br>
+        DATA &quot;John Smith&quot;, 6.75, 33<br>
+        DATA &quot;EOD&quot;, -1, -1<br>
+        <br>
+        END</p>
+      </blockquote>
+      <p>Notice that the Do loop requires a bit of pre-loop-processing.&nbsp; It 
+      also requires a <b>trailer value</b> or <b>sentinel</b>.&nbsp; This value 
+      must be something which absolutely would not possibly be part of the data.&nbsp; 
+      In this case I've used &quot;EOD&quot; for the string sentinel and -1 for the 
+      numeric sentinel.&nbsp; This is necessary to inform the loop to stop.</p>
+      <p>The RESTORE command is another important part of processing DATA, but 
+      this will be left for another time.<br>
+      <br>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="109" height="3" valign="top"><b>Homework</b></td>
+      <td height="3" valign="top">.</td>
+      <td>Use these DATA statements to write the following programs:<blockquote>
+        <p>DATA cambist, croissant, deification, hydrophyte, incisor</p>
+        <p style="margin-top: -16">DATA maculature, macerate, narcolepsy, 
+        shalloon, EOD</p>
+      </blockquote>
+<FORM METHOD="POST" ACTION="../_vti_bin/shtml.dll/Lessons/42Repetition.htm" webbot-action="--WEBBOT-SELF--">
+<!--webbot bot="SaveResults" S-Email-Format="TEXT/PRE" S-Email-Address="plong@northgatech.edu" B-Email-Label-Fields="TRUE" B-Email-Subject-From-Field="FALSE" S-Email-Subject="CIS 105 Lesson 42 Repetition" S-Builtin-Fields startspan --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot bot="SaveResults" i-checksum="43374" endspan --><P>
+Please provide the following contact information:</P>
+<BLOCKQUOTE>
+<TABLE>
+<TR>
+<TD ALIGN="right">
+<EM>Name</EM></TD>
+<TD>
+<INPUT TYPE=TEXT NAME="Contact_FullName" SIZE=35> </TD>
+</TR>
+<TR>
+<TD ALIGN="right">
+<EM>E-mail</EM></TD>
+<TD>
+<INPUT TYPE=TEXT NAME="Contact_Email" SIZE=25> </TD>
+</TR>
+</TABLE>
+</BLOCKQUOTE>
+<p>Write a program to count the number of words in the DATA statements.</p>
+<BLOCKQUOTE>
+<P>
+<TEXTAREA NAME="wordcount" ROWS=13 COLS=65></TEXTAREA>
+<BR>
+</P>
+</BLOCKQUOTE>
+<p><b>CHALLENGE:</b> Write a program to determine whether or not the words in 
+the DATA statements are in alphabetical order.</p>
+<BLOCKQUOTE>
+<P>
+<TEXTAREA NAME="alphaorder" ROWS=13 COLS=65></TEXTAREA>
+<BR>
+</P>
+</BLOCKQUOTE>
+<p>
+<INPUT TYPE=SUBMIT VALUE="Submit Form">
+<INPUT TYPE=RESET VALUE="Reset Form"> </p>
+</FORM>
+      <p>&nbsp;</p>
+      <p>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td></td></tr><!--msnavigation--></table></body>
+
+</html>

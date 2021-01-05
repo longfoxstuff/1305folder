@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Programming with Flowcharts&#59; 1305 </title>
+
+<style type="text/css">
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width:100%;
+	margin:auto;
+	background-color:#074C8F; /* blue */
+	font-size:6px;	
+}
+
+.content {
+	margin-left:30px;
+	margin-top:20px;
+	margin-right:30px;
+	margin-bottom:20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#ffffff;	
+}
+
+.mainBody {
+	margin-left:40px;
+	margin-bottom:0;
+}
+
+.icon {
+	width:92%;
+	margin:auto;
+	text-align:center;	
+}
+
+.menu {
+	width:92%;
+	margin:auto;
+	text-align:center;
+	font-size:20px;
+	background-color:#E6F6F0;
+}    
+
+.footer {
+	width:92%;
+	margin:auto;
+	color:#074C8F;
+	text-align:center;
+	font-size:11px;
+	font-style:italic;
+}
+
+hr {
+	width:92%;
+	margin:auto;
+}  
+
+ul, li {
+	margin-left: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+	text-align:center;
+}
+  
+.outerTable  {
+	margin:auto;
+	width:98%;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.innerTable01  {
+	margin:auto;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.colorTable  {
+	margin:auto;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.basicTable  {
+	margin:auto;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+td {
+	vertical-align:top;
+}
+
+</style>
+  
+</head>
+
+<body>
+<div class="container">
+	<a id="anchor10"></a><p>&nbsp;</p> <!-- This is the anchor for the link back to the top of the page (see line 243) -->
+<div class="content">
+<div class="icon">
+	<p style="font-size:10px;">&nbsp;</p>
+	<p><img src="../images/27_2012-NGTC-Logo-small.jpg" 
+			alt="NGTC logo" usemap="#MapNGTC" 
+			style="height:96px; width:300px;" />
+      <map name="MapNGTC">
+        <area shape="rect" coords="-1,1,299,96" href="https://www.northgatech.edu/default.aspx" 
+        	target="new" alt="Link to North Georgia Technical College (NGTC) https://www.northgatech.edu">
+      </map>	  
+</div> <!-- end icon div -->
+
+<div class="menu">
+	<a href="../index.html">Home</a> &nbsp;&middot; &nbsp;
+	<a href="../syllabus.html">Syllabus</a> &nbsp;&middot; &nbsp;
+	<a href="../schedule.html">Schedule</a> &nbsp;&middot; &nbsp;
+	<a href="../links.html">Links</a> &nbsp;&middot; &nbsp;
+	<a href="../homework.html">Homework</a>
+</div> <!-- end menu div -->
+<hr>
+
+<h2>CIST 1305 Lesson 10 Programming with Flowcharts</h2>
+
+  <table id="outerTable" style="width:96%; margin:auto; border:1px solid black;">
+  
+	<tr>
+      <td style="width:15%; border:1px solid black;"><strong>&nbsp;Preparation<br />&nbsp;for Learning</strong></td>
+      <td style="width:2%; border:1px solid black;">&nbsp;</td>
+      <td style="width:83%; border:1px solid black;"><strong>&nbsp;Steps:</strong><ul>
+		<li>Once you get all the verbs, adjectives, and nouns in place you 
+        should be able to move on to the next step</li>
+		<li>Remember those flowcharts from <a href="08flowcharts.html">earlier</a>?&nbsp; 
+        That's actually the next step</li>
+		<li>Why would a flowchart follow an IPO Table?</li>
+		<li>Are they <em>both</em> necessary?</li>
+		<li>What does a flowchart show that an IPO Table doesn't?</li>
+		<li>What does an IPO Table show that a flowchart doesn't?</li></ul>
+		</td>
+    </tr>
+    <tr>
+      <td style="width:15%; border:1px solid black;"><strong>&nbsp;Focal Point</strong></td>
+      <td style="width:2%; border:1px solid black;">&nbsp;</td>
+      <td style="width:83%; border:1px solid black;"><strong>&nbsp;Planning Your Program - 
+		Flowcharts for Programming</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Learning</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><p><strong>&nbsp;Remember</strong> the 
+		<a href="08Flowcharts.html#anchor081">symbols</a> for flowcharts.<br />
+			&nbsp;Those symbols can directly relate to certain phrases which may be used in IPO charts.<br />
+			&nbsp;These are some examples.</p>
+			
+      <table id="innerTable01" style="width:80%; margin:auto; border:1px solid black;">
+		<tr>
+          <td style="width:15%; border:1px solid black; text-align:center;"><strong>Symbol</strong></td>
+          <td style="width:20%; border:1px solid black; text-align:center;"><strong>Use</strong></td>
+          <td style="width:65%; border:1px solid black; text-align:center;"><strong>Examples</strong></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; text-align:center;">
+			<img src="Images_Lesson10/image001.gif" style="width:93px; height:24px;" alt="oval shape"></td>
+          <td style="border:1px solid black; text-align:center;">Terminal</td>
+          <td style="border:1px solid black;">&nbsp;This can be a header or the word &quot;end&quot;
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>rem This is the beginning of the program</em></p>
+			<p><em>&nbsp;&nbsp;&nbsp;&nbsp;END</em></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; text-align:center;">
+			<img src="Images_Lesson10/image002.gif" style="border:none; width:83px; height:36px;" alt="rectangle shape"></td>
+          <td style="border:1px solid black; text-align:center;">Process</td>
+          <td style="border:1px solid black;"><em>&nbsp;x = 7 + 4</em>
+			<p><em>&nbsp;total = subtotal + tax</em></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; text-align:center;">
+			<img src="Images_Lesson10/image003.gif" style="border:none; width:60px; height:44px;" alt="diamond shape"></td>
+          <td style="border:1px solid black; text-align:center;">Decision</td>
+          <td style="border:1px solid black;"><em>&nbsp;if x = 11 then ...</em></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; text-align:center;">
+			<img src="Images_Lesson10/image004.gif" style="border:none; width:68px; height:36px;" alt="parallelogram shape"></td>
+          <td style="border:1px solid black; text-align:center;">Input/Output</td>
+          <td style="border:1px solid black;"><em>&nbsp;input &quot;Please type your name&quot;, name$</em>
+			<p><em>&nbsp;print &quot;Hello &quot;; 
+          name$</em></td>
+        </tr>
+      </table> <!-- end innerTable01 -->
+	  
+      <p>&nbsp;Look at your IPO Tables from yesterday.<br />
+		&nbsp;Do any of these words and phrases look familiar?</p>
+      <p>&nbsp;Problem 9-1 from lesson 9</p>
+	  
+	  <table id="colorTable" style="width:98%; margin:auto; border:1px solid black;">
+        <tr>
+          <td style="width:16%; border:1px solid black; background-color:#FFFF00">&nbsp;Inputs</td>
+          <td style="width:68%; border:1px solid black; background-color:#FFFF00">&nbsp;Processes</td>
+          <td style="width:16%; border:1px solid black; background-color:#FFFF00">&nbsp;Outputs</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; background-color:#999999">char_1</td>
+          <td style="border:1px solid black; background-color:#3399CC">Input three characters</td>
+          <td style="border:1px solid black; background-color:#999999">message</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; background-color:#999999">char_2</td>
+          <td style="border:1px solid black; background-color:#3399CC">print &quot;Hello!&quot;</td>
+          <td style="border:1px solid black; background-color:#999999">&nbsp;</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; background-color:#999999">char_3</td>
+          <td style="border:1px solid black; background-color:#3399CC">print char_1, char_2, char_3</td>
+          <td style="border:1px solid black; background-color:#999999">&nbsp;</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; background-color:#999999">&nbsp;</td>
+          <td style="border:1px solid black; background-color:#3399CC">print &quot;!&nbsp; Have a nice day.&quot;</td>
+          <td style="border:1px solid black; background-color:#999999">&nbsp;</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; background-color:#999999">&nbsp;</td>
+          <td style="border:1px solid black; background-color:#3399CC">&nbsp;</td>
+          <td style="border:1px solid black; background-color:#999999">&nbsp;</td>
+        </tr>
+      </table> <!-- end colorTable -->
+      <p>&nbsp;</p>
+	  
+	<table id="basicTable" style="width:98%; margin:auto; border:1px solid black;">
+	
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Input</td>
+		</tr>
+		
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Input</td>
+		</tr>
+
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Print</td>
+		</tr>
+		
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Print</td>
+		</tr>
+		
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Print</td>
+		</tr>
+		
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Print</td>
+		</tr>
+
+		<tr>
+			<td style="border:1px solid black; text-align:center;">Print</td>
+		</tr>
+		
+			
+	</table> <!-- end basicTable -->
+	
+	<p>&nbsp;</p>
+	<p style="text-align:center;">
+		<img src="Images_Lesson10/image006.jpg" style="border:none;" alt="Flow Chart Example"></p></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Assignment</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+	  <td style="border:1px solid black;"><strong>&nbsp;Construct a flowchart for the following</strong>&#58;<p>
+		<p>&nbsp; <strong>Problem 10-2</strong>&#58; &#40;Corresponds to Lesson 9-2&#59; IPO Tables&#41;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Construct a Flow Chart for the following problem&#58;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will receive two integers (whole numbers) from the user&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will add the numbers, subtract the numbers, multiply the numbers, 
+			divide the numbers&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And then display &#40;print&#41; the results on the screen.</p>
+
+		<p>&nbsp; <strong>Problem 10-3</strong>&#58; &#40;Corresponds to Lesson 9-3&#59; IPO Tables&#41;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Construct a Flow Chart for the following problem&#58;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will receive an integer (whole number) from the user;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will add 2 to the number, triple the number, subtract 5 from it;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and then display &#40;print&#41; the results on the screen.</p>
+		<p><strong>&nbsp;Submit</strong>&#58;<br /> 
+			&nbsp;Submit as a Word document&#58;<br />
+			&nbsp;Use the Word drawing tools for the flowcharts and use Word's tables for the IPO Tables.<br />
+			&nbsp;Submit all assignments to your student folder on \\CIS-WEB-01.</p>
+		<p>&nbsp;Please include the following information&#58;<br />
+			&nbsp;Your Name, Course, Lesson Number and Assignment, and Email Address.</p></td>
+    </tr>
+  </table> <!-- end outerTable -->
+  
+<p style="text-align:center; font-size:13px;"><a href="10ProgrammingWithFlowCharts.html#anchor10">Link to top of page</a></p>
+
+<div class="footer">
+<p>Copyright &#169; 2018 PLong Heavy Industries</p>
+</div> <!-- end footer div -->
+
+</div> <!-- end content div -->
+<p>&nbsp;</p>
+</div> <!-- end container div -->
+</body>
+</html>

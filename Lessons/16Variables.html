@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>16 Variables&#59; 1305 </title>
+
+<style>
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width:100%;
+	margin:auto;
+	background-color:#074C8F; /* blue */
+	font-size:6px;	
+}
+
+.content {
+	margin-left:30px;
+	margin-top:20px;
+	margin-right:30px;
+	margin-bottom:20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#ffffff;	
+}
+
+.mainBody {
+	margin-left:40px;
+	margin-bottom:0;
+}
+
+.icon {
+	width:92%;
+	margin:auto;
+	text-align:center;	
+}
+
+.menu {
+	width:92%;
+	margin:auto;
+	text-align:center;
+	font-size:20px;
+	background-color:#E6F6F0;
+}    
+
+.footer {
+	width:92%;
+	margin:auto;
+	color:#074C8F;
+	text-align:center;
+	font-size:11px;
+	font-style:italic;
+}
+
+hr {
+	width:92%;
+	margin:auto;
+}  
+
+ul, li {
+	margin-left: 20px;
+}
+
+dl, dt {
+	margin-left: 34px;
+}
+
+dd {
+	margin-left: 60px;
+}
+
+h1, h2, h3, h4, h5 {
+	text-align:center;
+}
+  
+.table  {
+	margin:auto;
+	width:98%;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+td {
+	vertical-align:top;
+}
+
+nav {
+    text-align: center;
+}
+  </style>
+  
+</head>
+
+<body>
+<div class="container">
+	<a id="anchor16"></a><p>&nbsp;</p>
+<div class="content">
+<div class="icon">
+	<p style="font-size:10px;">&nbsp;</p>
+	<p><img src="../images/27_2012-NGTC-Logo-small.jpg" 
+			alt="NGTC logo" usemap="#MapNGTC" 
+			style="height:96px; width:300px;" />
+      <map name="MapNGTC">
+        <area shape="rect" coords="-1,1,299,96" href="https://www.northgatech.edu/default.aspx" 
+        	target="new" alt="Link to North Georgia Technical College (NGTC) https://www.northgatech.edu">
+      </map>	  
+</div> <!-- end icon div -->
+
+<nav>
+	<a href="../index.html">Home</a> &nbsp;&middot; &nbsp;
+	<a href="../syllabus.html">Syllabus</a> &nbsp;&middot; &nbsp;
+	<a href="../schedule.html">Schedule</a> &nbsp;&middot; &nbsp;
+	<a href="../links.html">Links</a> &nbsp;&middot; &nbsp;
+	<a href="../homework.html">Homework</a>
+</nav>
+<hr>
+
+<h2>CIST 1305 Lesson 16 Variables</h2>
+
+  <table id="table" style="width:96%; margin:auto; border:1px solid black;">
+  
+	<tr>
+      <td style="width:15%; border:1px solid black;"><strong>&nbsp;Preparation<br />&nbsp;for Learning</strong></td>
+      <td style="width:2%; border:1px solid black;">&nbsp;</td>
+      <td style="width:83%; border:1px solid black;"><strong>&nbsp;Steps:</strong><dl>
+		<dt>Think about the <a href="http://webopedia.com/TERM/v/variable.html">definition</a> of the word variable</dt>
+		<dt>Think about places where you use variables or variability</dt>
+			<dd><em>Windshield wipers</em></dd>
+			<dd><em>Algebra</em></dd>
+			<dd><em>Electric drills</em></dd>
+		<dt>How does the word variable make you feel?</dt>
+			<dd style="font-size:2px;">&nbsp;</dd></dl>
+		</td>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Focal Point</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Elements of Programming - Variables</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Learning</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Mathematical definition:</strong>&nbsp; A variable is a 
+		quantity that can assume any value.
+		<p><strong>&nbsp;Computer definition:&nbsp; </strong>A variable is a named location in memory where 
+			values are stored.<br />&nbsp;These values can be changed throughout a program's execution.</p>
+      <ul>
+		<li>Think about variables at temporary holding areas for information</li>
+		<li>How long will these holding areas be available?</li>
+		<li>What does the word initialize have to do with variables?</li>
+		<li>What does the word initialize have to do with a computer's memory?</li>
+		</ul>
+      <p><strong>&nbsp;Naming variables:</strong></p>
+      <ul>
+		<li>Use descriptive names</li>
+		<li>Only use alpha-numeric characters for names of variables</li>
+		<li>The name must begin with a letter or underscore</li>
+		<li>JavaScript is case consistent</li>
+		<li><em>NEVER</em> use a JavaScript <a href="http://www.quackit.com/javascript/javascript_reserved_words.cfm">keyword</a></li>
+		</ul>
+      <p><strong>&nbsp;Using variables in JavaScript:</strong></p>
+      <ul>
+		<li>As a good general rule always define your variables up front using 
+		  the VAR statement</li>
+		<li>When giving a variable a value keep the variable to the left of the 
+        equal sign (example num = 3)</li>
+		<li>The data to the right of the equal sign will be the value  of the variable when the line of code has been interpreted</li>
+		<li>Think of the equal sign as meaning <em>&quot;is assigned the value of&quot;</em> 
+        instead of <em>&quot;is equal to&quot;</em> as in mathematics</li>
+		</ul>
+      <p>&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Homework</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Read</strong> <a href="../Lessons/17Variables.html">Lesson 17</a>.</td>  
+    </tr>
+  </table> <!-- end table -->
+  
+<p style="text-align:center; font-size:13px;"><a href="16Variables.html#anchor16">Link to top of page</a></p>
+
+<footer>
+<small><i>Copyright &#169; 2018 PLong Heavy Industries</i></small>
+</footer>
+
+</div> <!-- end content div -->
+<p>&nbsp;</p>
+</div> <!-- end container div -->
+</body>
+</html>

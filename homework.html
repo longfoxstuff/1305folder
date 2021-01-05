@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Homework</title>
+  
+<script>
+/* This function is only supported in IE and Safari */
+function myFunction()
+{
+alert("Stop! Think! Have you completed all your 1305 homework assignments?!");
+}
+</script>
+
+</head>
+
+<body onunload="myFunction()">
+
+<div class="container">
+
+<ul class="nav nav-pills">
+  <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="./syllabus.html">Syllabus</a></li>
+  <li class="nav-item"><a class="nav-link" href="./schedule.html">Schedule</a></li>
+  <li class="nav-item"><a class="nav-link active" href="./homework.html">Homework</a></li>
+  <li class="nav-item"><a class="nav-link" href="./links.html">Links</a></li> 
+</ul>
+<br />
+
+<div class="content">
+
+	<h3>Homework for CIST 1305</h3>
+<div class="background"> <!-- This is a background image: text can be placed on top of it -->
+		<p>&nbsp;</p> <!-- replace &nbsp; with text... -->
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p style="color:#074C8F; font-size:16px;">Current date and time:</p>
+		<p style="color:#074C8F; font-size:16px;" id="date"></p>
+<script>
+var d = new Date();
+document.getElementById("date").innerHTML = d.toString();
+</script>
+<!-- There is nothing here -->
+</div><!-- end background div -->
+
+<br />
+<footer>
+	<p>Copyright &#169; 2018 PLong Heavy Industries</p>
+</footer>
+</div> <!-- end content div -->
+
+</div> <!-- end container div -->
+</body>
+</html>

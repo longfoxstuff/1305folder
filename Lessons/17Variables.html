@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>17 Variables&#59; 1305 </title>
+
+<style type="text/css">
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width:100%;
+	margin:auto;
+	background-color:#074C8F; /* blue */
+	font-size:6px;	
+}
+
+.content {
+	margin-left:30px;
+	margin-top:20px;
+	margin-right:30px;
+	margin-bottom:20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#ffffff;	
+}
+
+.mainBody {
+	margin-left:40px;
+	margin-bottom:0;
+}
+
+.icon {
+	width:92%;
+	margin:auto;
+	text-align:center;	
+}
+
+.menu {
+	width:92%;
+	margin:auto;
+	text-align:center;
+	font-size:20px;
+	background-color:#E6F6F0;
+}    
+
+.footer {
+	width:92%;
+	margin:auto;
+	color:#074C8F;
+	text-align:center;
+	font-size:11px;
+	font-style:italic;
+}
+
+hr {
+	width:92%;
+	margin:auto;
+}  
+
+ul, li {
+	margin-left: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+	text-align:center;
+}
+  
+.outerTable  {
+	margin:auto;
+	width:98%;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.innerTable01  {
+	margin:auto;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.colorTable  {
+	margin:auto;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+.basicTable  {
+	margin:auto;
+	border:1px solid black;
+	line-height:2em;
+	font-size:14px;
+}
+
+td {
+	vertical-align:top;
+}
+
+nav {
+    text-align: center;
+}
+
+  </style>
+  
+</head>
+
+<body>
+<div class="container">
+	<a id="anchor17"></a><p>&nbsp;</p> 
+<div class="content">
+<div class="icon">
+	<p style="font-size:10px;">&nbsp;</p>
+	<p><img src="../images/27_2012-NGTC-Logo-small.jpg" 
+			alt="NGTC logo" usemap="#MapNGTC" 
+			style="height:96px; width:300px;" />
+      <map name="MapNGTC">
+        <area shape="rect" coords="-1,1,299,96" href="https://www.northgatech.edu/default.aspx" 
+        	target="new" alt="Link to North Georgia Technical College (NGTC) https://www.northgatech.edu">
+      </map>	  
+</div> <!-- end icon div -->
+
+<nav>
+	<a href="../index.html">Home</a> &nbsp;&middot; &nbsp;
+	<a href="../syllabus.html">Syllabus</a> &nbsp;&middot; &nbsp;
+	<a href="../schedule.html">Schedule</a> &nbsp;&middot; &nbsp;
+	<a href="../links.html">Links</a> &nbsp;&middot; &nbsp;
+	<a href="../homework.html">Homework</a>
+</nav> <!-- end menu div -->
+<hr>
+
+<h2>CIST 1305 Lesson 17 Variables</h2>
+
+  <table id="outerTable" style="width:96%; margin:auto; border:1px solid black;">
+  
+	<tr>
+      <td style="width:15%; border:1px solid black;"><strong>&nbsp;Preparation<br />&nbsp;for Learning</strong></td>
+      <td style="width:2%; border:1px solid black;">&nbsp;</td>
+      <td style="width:83%; border:1px solid black;"><strong>&nbsp;Steps:</strong><ul>
+		<li>Think about how you've used variables in Algebra</li>
+		<li>Solving for them?</li>
+		<li>Simplifying them?</li>
+		<li>Plugging in values for them?</li>
+		<li>Specifying ranges for them?</li>
+		<li>All these things can be done with variables</li>
+		<li>Think about the word Constant</li>
+		<li>What kind of feeling does that word give you?</li>
+		<li>Think about a time where have you needed something constant, never changing</li>
+		<li>Have you used that sort of thing in Math?</li>
+		</ul>
+		</td>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Focal Point</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Elements of Programming &#45; Variables &amp; Constants</strong></td>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Learning</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Variables - From whence cometh my value?</strong><ul>
+		<li>Variables by their very nature don't have their values programmed into the code<br /> 
+			&#40;except perhaps their initial value&#41;</li>
+		<li>They have to come from some outside source else they would not be 
+			&#34;variable&#34;</li>
+		<li>One way to get a value is to read it from a data file</li>
+		<li>Another way would be to read some kind of input device for a value<br /> 
+			&#40;such as an Analogue to Digital Converter&#41;</li>
+		<li>One of the most common ways to assign a value to a variable is to 
+			receive it from the user</li>
+		<li>JavaScript uses a Prompt statement to do that</li>
+		</ul>
+      <p><strong>&nbsp;INPUT&#39;ting values into Variables</strong></p>
+      <ul>
+		<li>Reads input from the keyboard or a file.<br />
+			We're concentrating right now on the keyboard aspect of it</li>
+	  </ul>
+      <ul>
+		<li>The syntax on this command is as follows:</li>
+		<li>prompt&#40;&#34;<em>sometext</em>&#34;,&#34;<em>defaultvalue</em>&#34;&#41;&#59;<br />
+		</li>
+		</ul>
+      <ul>
+		<li>Practical application is as follows:</li>
+		<li>var name&#61;prompt&#40;&#34;Please enter your name&#34;,&#34; &#34;&#41;&#59;<br />
+		</li>
+		</ul>
+      <ul>
+		<li>This will give the variable name the value the user keys into the 
+        computer</li>
+		<li>Once this value is in the variable it can be manipulate in any way 
+        desired and then output in any way desired</li>
+		</ul>
+      <p><strong>&nbsp;PRINT'ing variable values to the screen</strong></p>
+      <ul>
+		<li>PRINT is a flexible command able to write information to the screen 
+        or to a file</li>
+		<li>We will mainly be concentrating at this time on writing information 
+        to the screen</li>
+		</ul>
+      <ul>
+		<li>The syntax of the PRINT command when used for screen display is as 
+        follows:</li>
+		<li>document.getElementById&#40;&#34;demo&#34;&#41;.innerHTML &#61;<br />
+		</li>
+		</ul>
+      <ul>
+		<li>Practical application is as follows:</li>
+		<li>document.getElementById&#40;&#34;demo&#34;&#41;.innerHTML&#40;&#34;Hello &#34; + name + &#34;! How are you today?&#34;&#41;&#59;<br />
+		</li>
+		</ul>
+      <ul>
+		<li>This will display on the screen the words Hello &#34;name&#34;! How are you today?</li>
+		</ul>
+      <p><strong>&nbsp;Some things just shouldn't change....</strong></p>
+      <ul>
+		<li>There are some times when you don't want to change a number under 
+        any circumstances barring a major rewrite of the program</li>
+		<li>An example of this might be the value for
+        <a href="http://www.c2.com/cgi/wiki?ValueOfPi">pi</a></li>
+		<li>You might not want to calculate it every time &#40;UNDERSTANDABLY SO!&#41; 
+        so that might be a variable you want to set up to use in your 
+        calculations</li>
+		<li>But since the variable doesn't change, it is actually a constant</li>
+		</ul>
+      <ul>
+		<li>The syntax for the CONST command is as follows:</li>
+		<li>CONST constantname = expression </li>
+		</ul>
+      <ul>
+		<li>Practical application is as follows:</li>
+		<li>CONST PI = 3.141593</li>
+		</ul>
+      <ul>
+		<li>This would create a memory location referenced by the name PI 
+        containing the value 3.141593</li>
+		<li>You cannot change the value of PI after defining it</li>
+		<li>You cannot VAR a variable named PI in the same program as creating 
+        it as a constant</li>
+		</ul>
+      <p><strong>&nbsp;Writing the program:</strong></p>
+      <ul>
+		<li>Let's write a program using everything we've done so far</li>
+		</ul>
+		<code>
+		&lt;!DOCTYPE HTML&gt;<br />
+&lt;html lang="en"&gt;<br />
+<br />
+&lt;head&gt;<br />
+&lt;meta charset="utf-8"&gt;<br />
+<br />
+&lt;title&gt;What's your name?&lt;/title&gt;<br />
+<br />
+&lt;!-- Program to display a statement with users name --&gt;<br />
+&lt;!-- plong --&gt;<br />
+&lt;!-- 4-25-11 --&gt;<br />
+&lt;!-- Updated by SBlair 07-08-15 --&gt;<br />
+<br />
+&lt;/head&gt;<br />
+<br />
+&lt;body&gt;<br />
+<br />
+&lt;script&gt;<br />
+
+function show_prompt()<BR>{<BR>var name=prompt("Please enter your name"," ");<br />
+<br />
+document.getElementById&#40;&#34;demo&#34;&#41;.innerHTML &#61;<br />
+(&#34;Hello, &#34; &#43; name  &#43; &#34; ! How are you today?&#34;)&#59; <br />}
+<br />
+<br />
+&lt;/script&gt;<br />
+
+<br />
+&lt;p&gt;This is an example of a very simple program...&lt;/p&gt;<br />
+<br />
+&lt;input type="button" onclick="show_prompt()" value="Show prompt box"   /&gt;<br />
+<br />
+&lt;p id="demo"&gt;&lt;/p&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+	</code>
+		<ul>
+			<li>Try this program to see how it runs</li>
+		</ul>
+      <p><strong>&nbsp;Group Work:</strong> Use JavaScript to write the following programs,<br />
+		&nbsp;Referring to the IPO Tables, Flowcharts, and Pseudocode you created for lessons 9, 10, and 13&#58;</p>
+	  
+	  <p style="margin-left:20px;">&nbsp; <strong>Problem 17-1</strong>&#58; &#40;Corresponds to 9-1, 10-1, and 13-1&#41;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use JavaScript to write the following problem&#58;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will instruct the user to input their name and three characters&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Receive the characters from the user&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And display the following message&#58;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#34;Hello &#40;name&#41;! Have a nice day&#34;.</p>
+		
+		<p style="margin-left:20px;">&nbsp; <strong>Problem 17-2</strong>&#58; &#40;Corresponds to 9-2, 10-2, and 13-2&#41;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use JavaScript to write the following problem&#58;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will receive two integers (whole numbers) from the user&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will add the numbers, subtract the numbers, multiply the numbers,<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and divide the numbers&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And then display &#40;print&#41; the results on the screen.<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hint: num1 = parseFloat(num1)</p>
+    </tr>
+	
+    <tr>
+      <td style="border:1px solid black;"><strong>&nbsp;Assignment</strong></td>
+      <td style="border:1px solid black;">&nbsp;</td>
+      <td style="border:1px solid black;"><strong>&nbsp;Assignment <em>&#40;May be done as group work&#41;&#58;</em></strong><br />
+		<p>Use JavaScript to write the following program&#58;<br />
+		&nbsp;Referring to the IPO Table, Flowchart, and Pseudocode you created for lessons 9, 10, and 13.</p>
+		<p>&nbsp; <strong>Problem 17-3</strong>&#58; &#40;Corresponds to 9-3, 10-3, and 13-3&#41;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use JavaScript to write the following program&#58;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will receive an integer (whole number) from the user&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will add 2 to the number, triple the number, subtract 5 from it&#59;<br /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and then display &#40;print&#41; the results on the screen.</p>
+		<p>&nbsp;Submit all assignments to your student folder on the \\CIS-WEB-01 server.<br />
+			&nbsp;Please include the following information&#58;<br />&nbsp;Your Name, Course, Lesson Number and Assignment, 
+				and Email Address.</p></td>		
+    </tr>
+  </table>
+  
+<p style="text-align:center; font-size:13px;"><a href="17Variables.html#anchor17">Link to top of page</a></p>
+
+<footer>
+<small><i>Copyright &#169; 2018 PLong Heavy Industries</i></small>
+</footer>
+
+</div> <!-- end content div -->
+<p>&nbsp;</p>
+</div> <!-- end container div -->
+</body>
+</html>
