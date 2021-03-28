@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!-- Created by SBLair for PLong; 07-28-2015 -->
+<!-- 23_Output_Example.html passed the W3C Markup Validation Service: 07-28-2015 -->
+<!-- 23_Output_Example.html passed the W3C CSS Validation Service: 07-28-2015 -->
+<!-- 23_Output_Example.html passed the AC Web Checker Web Accessibility Checker: 07-28-2015 -->
+
+<!-- Used as an example for 1305, Lesson 23; Simple Output -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Output Example&#59; 23 IO/1305</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+function show_prompt()
+{
+var age=prompt("Please enter your current age"," ");
+
+document.getElementById("demo").innerHTML =
+
+("You are now " + age  + " years old!"); 
+}
+
+</script>
+
+	<p>This is a simple example of ouput for Lesson 23 IO.</p>
+
+<input type="button" onclick="show_prompt()" value="Prompt Box"   />
+
+<p id="demo"></p> <!-- This line can be placed beofre or after the input type line -->
+
+</body>
+</html>

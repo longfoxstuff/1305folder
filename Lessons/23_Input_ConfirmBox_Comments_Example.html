@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- Created by SBLair for PLong; 07-29-2015 -->
+<!-- 23_Input_ConfirmBox_Comments_Example.html passed the W3C Markup Validation Service: 07-29-2015 -->
+<!-- 23_Input_ConfirmBox_Comments_Example.html passed the W3C CSS Validation Service: 07-28-2015 -->
+<!-- 23_Input_ConfirmBox_Comments_Example.html passed the AC Web Checker Web Accessibility Checker: 07-28-2015 -->
+
+<!-- Used as an example for 1305, Lesson 23; Input Confirm Box with Comments -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Input&#58; Confirm Box 23IO/1305</title>
+
+<script>
+// Example of a JavaScript one line comment - starts with two forward slashes
+// Typically comments are placed just before the section commenting on, though placing on same line at the end of a section is acceptable (Line 28)
+
+// This happens to be an if/else function
+function myFunction() {
+    var y; // a different name could be used for this variable: it could be another letter, or a name, like aBox
+    if (confirm("Press the OK button!") == true) {
+        y = "Congratulations: You pressed OK!"; // Note: you must use the same variable name throughout the function
+    } else {
+        y = "Oops! You pressed Cancel!"; // again, the variable name is still consistent
+    }
+    document.getElementById("demo").innerHTML = y; // returns the element that has the ID attribute with the specified value
+}
+
+// Note: JavaScript functions can be placed in the head (as this function is), or placed in the body where the html goes 
+
+/* Example of multiline comments:
+   You can continue your comment until you close the comments out - this is good for long, detailed explanations */
+ 
+</script>
+</head>
+
+<body>
+
+<!-- This is an HTML comment, NOT a JavaScript comment -->
+
+<h3>The Confirm Box</h3>
+
+	<p>Click the button to display a confirm box.</p>
+
+	<p><button onclick="myFunction()">Try This!</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try it again with a different input value.</p>
+
+	<p id="demo"></p> <!-- This "demo" is where you display the getElementByID 
+		(in this case, one of the messages you get when you click the OK of Cancel button) -->
+
+</body>
+</html>
+<!-- Notice it is neat and easy to read, with: 
+	 White spacing as needed, but no extra white space;
+	 Everything indented properly;
+	 Comments placed for clarity or explanation as needed. -->
