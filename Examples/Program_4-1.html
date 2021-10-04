@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!-- 1305/Program 4-1.html for PLong; (created by sblair 08-12-2014)   -->
+<!-- Program 4-1.html passed the W3C Markup Validation Service 08-18-2014 -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Program 4-1 (1305)</title>
+<style type="text/css"> <!-- styling -->
+body {
+	margin-left: 20px;
+}
+h1 {
+	margin-left: 20px;
+	font-size: 28px;
+}
+h2 {
+	margin-left: 20px;
+	font-size: 26px;
+}
+h3 {
+	margin-left: 20px;
+	font-size: 22px;
+}
+h4 {
+	margin-left: 20px;
+	font-size: 20px;
+}
+p {
+	margin-left: 28px;
+	font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CIST 1305</h1>
+<h2>Program 4-1, page 129</h2>
+	<p>A program students can use to calculate their average test score.<br />
+		Program also congratulates the student if average is greater than 95.</p>
+	<p>Click on Start to demonstrate prompt box.</p>
+	<p>Run as is&#59; also try running with all tests scores greater than than 95.</p>
+	
+<h4>Results&#58;</h4>
+
+	<p><button onclick="average()">Start</button></p>
+	<p id="demo"></p>
+	
+<script type="text/javascript">
+
+function average() {
+    var test1 = parseFloat(prompt("Enter the first test score.", "82"));
+	var test2 = parseFloat(prompt("Enter the second test score.", "76"));
+	var test3 = parseFloat(prompt("Enter the third test score.", "91"));
+	average = (test1 + test2 + test2) / 3;
+	average = Math.round(average * 1.0);
+if (average<=95) {
+	document.getElementById("demo").innerHTML = "The average is " + average + ".";
+	}
+else if (average>95) {
+	document.getElementById("demo").innerHTML = "The average is " + average + "."+"<br>"+" Congratulations! Great average!";
+    }	
+}
+</script>
+
+<h4>Pseudocode, page 129&#58;</h4>
+	
+	<p>1 // Declare variables<br />
+		2 Declare Real test1, test2, test3, average<br />
+		3<br />
+		4 // Get test 1<br />
+		5 Display "Enter the score for test #1."<br />
+		6 Input test1<br />
+		7<br />
+		8 // Get test 2<br />
+		9 Display "Enter the score for test #2."<br />
+		10 Input test2<br />
+		11<br />
+		12 // Get test 3<br />
+		13 Display "Enter the score for test #3."<br />
+		14 Input test3<br />
+		15<br />
+		16 // Calculate the average score.<br />
+		17 Set average = (test1 + test2 + test3) / 3<br />
+		18<br />
+		19 // Display the average.<br />
+		20 Display "The average is ", average<br />
+		21<br />
+		22 // If the average is greater than 95<br />
+		23 // congratulate the user.<br />
+		24 If average > 95 Then<br />
+		25 Display "Congratulations! Great average!"<br />
+		26 End If</p>
+
+<h4>Expected Program Outputs (with Input Shown in Bold)&#58;</h4>
+	<p>&#40;This program is set up to give an additional message if the average test score is higher than 95.&#41;</p>
+	<p>Enter the score for test #1.<br />
+		<strong>82</strong> [Enter]<br />
+		Enter the score for test #2.<br />
+		<strong>76</strong> [Enter]<br />
+		Enter the score for test #3.<br />
+		<strong>91</strong> [Enter]<br />
+		The average is 83</p>
+		
+	<p>&#40;Output if average score is higher than 95&#41;<br />
+		Enter the score for test #1.<br />
+		<strong>93</strong> [Enter]<br />
+		Enter the score for test #2.<br />
+		<strong>99</strong> [Enter]<br />
+		Enter the score for test #3.<br />
+		<strong>96</strong> [Enter]<br />
+		The average is 96<br />
+		Congratulations! Great average!</p>
+	
+<div class="footer">
+<p style="text-align: center; font-size:14px; font-style:italic; color:#004890;">Today&#39;s Date&#58;&nbsp;
+<script>
+// this JavaScript pulls the current date and displays it on the web page...
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='004890'>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</font>")
+
+</script></p>
+	<p style="font-size:12px;"><span style="color:#077A4A">This page passes HTML and CSS validation services and Web Accessibility Checker</span></p>
+	<p><img src="../images/HTML5_Validation.png" 
+			alt="W3C Markup Validation Service (passed)" usemap="#HTML5Val" style="width:76px; height:86px;" />
+      <map name="HTML5Val">
+        <area shape="rect" coords="3,3,72,87" href="http://validator.w3.org/#validate_by_upload" 
+        	alt="W3C Markup Validation Service" target="new">
+      </map>
+      	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <img src="../images/200px-W3C_valid_svg.png" 
+			alt="W3C CSS Validation (passed)" usemap="#CSSVal" style="width:86px; height:43px;" />
+          <map name="CSSVal">
+            <area shape="rect" coords="0,2,84,42" href="http://www.css-validator.org/#validate_by_upload" 
+            alt="Link to W3C CSS Validation" target="new">
+          </map>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="../images/checker_logo.png" alt="AChecker logo" width="200" height="43" usemap="#AChecker">
+          <map name="AChecker">
+            <area shape="rect" coords="3,3,195,42" href="http://achecker.ca/checker/index.php" 
+            alt="Link to AChecker http://achecker.ca/checker/index.php (opens in new window)" target="new">
+          </map>
+	</p>
+	<p style="font-size:12px; font-style: italic;">&#169; 2014 NGTC<br />
+		CIST 1305&#59; PLong &#40;sblair 08-08-2014&#41;</p>
+<!-- end .footer --></div>
+					
+</body>
+</html>
+

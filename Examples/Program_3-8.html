@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!-- 1305/Program 3-8.html for PLong; (created by sblair 08-11-2014)   -->
+<!-- Program 3-8.html passed the W3C Markup Validation Service 08-18-2014 -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Program 3-8 (1305)</title>
+<style type="text/css"> <!-- styling -->
+body {
+	margin-left: 20px;
+}
+h1 {
+	margin-left: 24px;
+	font-size: 28px;
+}
+h2 {
+	margin-left: 24px;
+	font-size: 26px;
+}
+h3 {
+	margin-left: 24px;
+	font-size: 22px;
+}
+h4 {
+	margin-left: 24px;
+	font-size: 20px;
+}
+p {
+	margin-left: 28px;
+	font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CIST 1305</h1>
+<h2>Program 3-8, page 102</h2>
+	<p>A program designed declare a local variable and then change the name and value.</p>
+	<p>Click on Start to demonstrate prompt box.</p>
+	
+<h3>Results&#58;</h3>
+
+	<p><button onclick="myFunction()">Start</button></p>
+	<p id="demo"></p>
+	
+<script type="text/javascript">
+function myFunction() {
+    num = parseInt("99");
+	changeMe = parseInt("0");
+	myValue = num;
+    if (num != null) {
+        document.getElementById("demo").innerHTML = "The number is " + num +"<br>"
+		+"I am changing the value. " + "<br>"
+		+"Now the number is " + changeMe +"<br>"
+		+"The number is " + myValue;		
+    }
+}
+</script>
+
+<h4>Pseudocode, page 102&#58;</h4>
+	
+	<p>1 Module main()<br />
+		2 Declare Integer number = 99<br />
+		3<br />
+		4 // Display the value stored in number.<br />
+		5 Display "The number is ", number<br />
+		6<br />
+		7 // Call the changeMe module, passing<br />
+		8 // the number variable as an argument.<br />
+		9 Call changeMe(number)<br />
+		10<br />
+		11 // Display the value of number again.<br />
+		12 Display "The number is", number<br />
+		13 End Module<br />
+		14<br />
+		15 Module changeMe(Integer myValue)<br />
+		16 Display "I am changing the value."<br />
+		17<br />
+		18 // Set the myValue parameter variable<br />
+		19 // to 0.<br />
+		20 Set myValue = 0<br />
+		21<br />
+		22 // Display the value in myValue.<br />
+		23 Display "Now the number is ", myValue<br />
+		24 End Module</p>
+
+<h4>Expected Program Output&#58;</h4>
+	<p>The number is 99<br />
+		I am changing the value.<br />
+		Now the number is 0<br />
+		The number is 99</p>	
+	
+<div class="footer">
+<p style="text-align: center; font-size:14px; font-style:italic; color:#004890;">Today&#39;s Date&#58;&nbsp;
+<script>
+// this JavaScript pulls the current date and displays it on the web page...
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='004890'>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</font>")
+
+</script></p>
+	<p style="font-size:12px;"><span style="color:#077A4A">This page passes HTML and CSS validation services and Web Accessibility Checker</span></p>
+	<p><img src="../images/HTML5_Validation.png" 
+			alt="W3C Markup Validation Service (passed)" usemap="#HTML5Val" style="width:76px; height:86px;" />
+      <map name="HTML5Val">
+        <area shape="rect" coords="3,3,72,87" href="http://validator.w3.org/#validate_by_upload" 
+        	alt="W3C Markup Validation Service" target="new">
+      </map>
+      	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <img src="../images/200px-W3C_valid_svg.png" 
+			alt="W3C CSS Validation (passed)" usemap="#CSSVal" style="width:86px; height:43px;" />
+          <map name="CSSVal">
+            <area shape="rect" coords="0,2,84,42" href="http://www.css-validator.org/#validate_by_upload" 
+            alt="Link to W3C CSS Validation" target="new">
+          </map>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="../images/checker_logo.png" alt="AChecker logo" width="200" height="43" usemap="#AChecker">
+          <map name="AChecker">
+            <area shape="rect" coords="3,3,195,42" href="http://achecker.ca/checker/index.php" 
+            alt="Link to AChecker http://achecker.ca/checker/index.php (opens in new window)" target="new">
+          </map>
+	</p>
+	<p style="font-size:12px; font-style: italic;">&#169; 2014 NGTC<br />
+		CIST 1305&#59; PLong &#40;sblair 08-08-2014&#41;</p>
+<!-- end .footer --></div>
+					
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1305 2-2</title>
+</head>
+
+<body>
+<h1>Welcome to 1305 2-2</h1>
+
+<p>Click the button to determine the profit based on the salesTotal.</p>
+
+<button onclick="myFunction()">Profit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var salesTotal = prompt("Please enter the salesTotal", "0");
+    salesTotal = parseFloat(salesTotal);
+	
+	var profit = salesTotal * .23;
+		
+    if (salesTotal != null) {
+        document.getElementById("demo").innerHTML =
+        "The profit is $" + Math.round(profit) + ".";
+    }
+}
+</script>
+
+<p><small>Coded by PLong 9-16-2014</small></p>
+</body>
+
+</html>

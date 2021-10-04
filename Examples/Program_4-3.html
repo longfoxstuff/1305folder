@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!-- 1305/Program 4-3.html for PLong; (created by sblair 08-13-2014) -->
+<!-- Updated by SBlair: 07-30-2015 -->
+<!-- Program 4-3.html passed the W3C Markup Validation Service 08-18-2014, 07-30-2015 -->
+<!-- Program 4-3.html passed the W3C CSS Validation Service 08-18-2014, 07-30-2015 -->
+<!-- Program 4-3.html passed the AChecker Web Accessibility Checker 08-18-2014, 07-30-2015 -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Program 4-3 (1305)</title>
+<style type="text/css">
+
+body {
+	margin-left: 20px;
+}
+
+h1 {
+	margin-left: 20px;
+	font-size: 28px;
+}
+
+h2 {
+	margin-left: 20px;
+	font-size: 26px;
+}
+
+h3 {
+	margin-left: 20px;
+	font-size: 22px;
+}
+
+h4 {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+p {
+	margin-left: 28px;
+	font-size: 18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CIST 1305</h1>
+<h2>String Comparison Program</h2>
+	<p>A simple program which allows a string comparison&#58;<br />
+		In this case, it compares an entered password with the correct password &#40;A7prospero6&#41;.</p>
+	<p>Click on PasswordChecker to demonstrate prompt box.</p>
+	<p>Run as is with PLong&#59; run with correct password A7prospero6&#59; also try running using other passwords.</p>
+	
+<h3>Results&#58;</h3>
+	<p><button onclick="myFunction()">PasswordChecker</button></p>
+	<p id="demo"></p>
+
+<script type="text/javascript">
+
+function myFunction() {
+    var password = "A7prospero6";
+	var password = prompt("Enter the password","PLong");
+if (password=="A7prospero6") 
+	{
+	document.getElementById("demo").innerHTML = "Password accepted.";
+	}
+else if (password!="A7prospero6") 
+	{
+	document.getElementById("demo").innerHTML = "Sorry, that is not the correct password";
+    }
+	
+}    
+</script>
+
+<h4>Pseudocode&#58;</h4>
+	
+	<p>1 // A variable to hold a password.<br />
+		2 Declare String password<br />
+		3<br />
+		4 // Prompt the user to enter the password.<br />
+		5 Display "Enter the password."<br />
+		6 Input password<br />
+		7<br />
+		8 // Determine whether the correct password<br />
+		9 // was entered.<br />
+		10 If password == "A7prospero6" Then<br />
+		11 Display "Password accepted."<br />
+		12 Else<br />
+		13 Display "Sorry, that is not the correct password."<br />
+		14 End If</p>
+
+<h4>Expected Program Output (with Input Shown in Bold)&#58;</h4>
+	<p>&#40;This program can give two different outputs depending on input.&#41;</p>
+	<p>&#40;Output Option 1&#41;<br />
+		Enter the password.<br />
+		<strong>PLong</strong> [Enter]<br />
+		Sorry, that is not the correct password.</p>
+	<p>&#40;Output Option 2&#41;<br />
+		Program Output<br />
+		Enter the password.<br />
+		<strong>A7prospero6</strong> [Enter]<br />
+		Password accepted.</p>
+	
+<div class="footer">
+
+	<p style="text-align: center; font-size:14px; font-style:italic; color:#003A73;">Today&#39;s Date&#58;
+	
+<script>
+// this JavaScript pulls the current date and displays it on the web page...
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='004890'>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</font>")
+
+</script></p>
+	<p style="text-align:center; font-size:12px;"><span style="color:#077A4A">
+		This page passes HTML and CSS validation services and Web Accessibility Checker</span></p>
+	<p style="text-align:center;"><img src="../images/HTML5_Validation.png" 
+			alt="W3C Markup Validation Service (passed)" usemap="#HTML5Val" style="width:76px; height:86px;" />
+      <map name="HTML5Val">
+        <area shape="rect" coords="3,3,72,87" href="http://validator.w3.org/#validate_by_upload" 
+        	alt="W3C Markup Validation Service" target="new">
+      </map>
+      	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <img src="../images/200px-W3C_valid_svg.png" 
+			alt="W3C CSS Validation (passed)" usemap="#CSSVal" style="width:86px; height:43px;" />
+          <map name="CSSVal">
+            <area shape="rect" coords="0,2,84,42" href="http://www.css-validator.org/#validate_by_upload" 
+            alt="Link to W3C CSS Validation" target="new">
+          </map>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="../images/checker_logo.png" alt="AChecker logo" width="200" height="43" usemap="#AChecker">
+          <map name="AChecker">
+            <area shape="rect" coords="3,3,195,42" href="http://achecker.ca/checker/index.php" 
+            alt="Link to AChecker http://achecker.ca/checker/index.php (opens in new window)" target="new">
+          </map>
+	</p>
+	<p style="text-align:center; font-size:12px; font-style:italic;">&#169; 2014, 2015 NGTC<br />
+		CIST 1305&#59; PLong &#40;sblair 08-08-2014, updated 07-30-2015&#41;</p>
+<!-- end .footer --></div>
+					
+</body>
+</html>
+

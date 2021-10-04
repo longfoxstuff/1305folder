@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<!-- 1305/Example/32_Example1_Nested_IfElse.html for PLong -->
+<!-- Originally created by Sue Blair; June 7, 2011 for CIS 105 Final Project -->
+<!-- Updated by SBlair: 08-04-2015 -->
+<!-- Example/32_Example1_Nested_IfElse.html passed the W3C Markup Validation Service  -->
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>32 Example Nested If Else</title> <!-- Tab Title for web page -->
+
+<style type="text/css"> <!-- styling -->
+
+body {
+	margin-left: 20px;
+}
+h1 {
+	margin-left: 24px;
+	font-size: 28px;
+}
+h2 {
+	margin-left: 24px;
+	font-size: 26px;
+}
+h3 {
+	margin-left: 24px;
+	font-size: 22px;
+}
+h4 {
+	margin-left: 24px;
+	font-size: 20px;
+}
+p {
+	margin-left: 28px;
+	font-size: 18px;
+}
+</style>
+
+<!-- Note that the JavaScript is in the Head, rather than in the Body: It can be placed in either location. -->
+<script type="text/javascript">
+
+function show_prompt() {
+
+	var custName=prompt("Please enter the customer name.");
+	var purchAmt=prompt("Please enter the purchase price. Do not input a dollar sign.")*1;
+	var taxCode=prompt("Please enter the customer tax code.");
++
+	var salesTax=((purchAmt)*(taxCode));
+	var totalDue=((salesTax)+(purchAmt));
+	
+	if (taxCode=0)
+// defines condition of taxCode: if taxCode is equal to 0 there is no tax. (The zero gives the program a place to start.)
+  {
+  
+  document.getElementById("show_prompt").innerHTML="Customer name: "  + (custName) + "<br />Purchase Amount: $" + (purchAmt) + "<br />Sales Tax: Exempt<br />Total Amount Due: $" + (purchAmt) + ".";
+  }
+  // end if function
+	else if (taxCode=1)
+
+	{
+	document.getElementById("show_prompt").innerHTML="Customer name: "  + (custName) + "<br />Purchase Amount: $" + (purchAmt) + "<br />Sales Tax: $" + (salesTax) + "<br />Total Amount Due: $" + (totalDue) + "."; 
+	}
+/*
+	else if (taxCode=2)
+	{
+	document.getElementById("show_prompt").innerHTML="Customer name: "  + (custName) + "<br />Purchase Amount: $" + (purchAmt) + "<br />Sales Tax: $" + (salesTax) + "<br />Total Amount Due: $" + (totalDue) + "."; 
+	}
+	
+	else if (taxCode=3)
+	{
+	document.getElementById("show_prompt").innerHTML="Customer name: "  + (custName) + "<br />Purchase Amount: $" + (purchAmt) + "<br />Sales Tax: $" + (salesTax) + "<br />Total Amount Due: $" + (totalDue) + ".";
+	}
+	
+	else 
+	// this is the default if the first four conditions are not true
+	{
+	document.getElementById("show_promptt").innerHTML="You need to input the correct Tax Code."; 
+	} */
+}
+
+<!-- The closing bracket here indicates the end of the IF statement -->	
+		
+</script>
+</head>
+
+<body>
+
+<h1>THIS CODE DOES NOT WORK YET!!</h1>
+<h1>CIST 1305, Lesson 32 Example&#58; Nested If Else</h1>
+
+<h2>Program to Process Customer Record</h2>
+	<p><input type="button" onclick="show_prompt()" value="Start Here"   /></p>
+	
+<h3>Results</h3>	
+	
+	<p id="show_prompt"></p>
+	<p>&nbsp;</p>
+
+<h3>Program requirements&#58;</h3>
+			<ul>
+				<li>Get customer&#39;s name</li>
+				<li>Get customer&#39;s purchase amount</li>
+				<li>Get customer&#39;s tax code</li>
+			</ul>
+		
+<h3>Tax Codes&#58;</strong></h3>
+			<ul>
+				<li>0 tax exempt &#40;0&#37;&#41;</li>
+				<li>1 state tax only &#40;3&#37;&#41;</li>
+				<li>2 federal and state sales tax &#40;5&#37;&#41;</li>
+				<li>3 special sales tax &#40;7&#37;&#41;</li>
+			</ul>
+
+<h3>Program must calculate&#58;</h3>
+			<ul>
+				<li>The sales tax</li>
+				<li>Total amount due</li>		
+			</ul>
+			
+<h3>Program must print &#40;output&#41;&#58;</h3>
+			<ul>
+				<li>Customer&#39;s name</li>
+				<li>purchase amount</li>
+				<li>Sales tax</li>
+				<li>Total amount due</li>
+			</ul>
+			
+<h3>IPO chart&#58;</h3>
+		 
+		 <table id="ipoChartTable" style="width:50%;">
+			<tr>
+			  <td style="width:30%"><strong>&nbsp;Input</strong></td>
+			  <td style="width:40%"><strong>&nbsp;Processing</strong></td>
+			  <td style="width:30%"><strong>&nbsp;Output</strong></td>
+			</tr>
+			
+			<tr>
+			  <td>&nbsp;custName</td>
+			  <td>&nbsp;calculate salesTax</td>
+			  <td>&nbsp;custName</td>
+			</tr>
+			
+			<tr>
+			  <td>&nbsp;purchAmt</td>
+			  <td>&nbsp;calculate totalDue</td>
+			  <td>&nbsp;purchAmt</td>
+			</tr>
+			
+			<tr>
+			  <td>&nbsp;taxCode</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;salesTax</td>
+			</tr>
+			
+			<tr>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;totalDue</td>
+			</tr>
+			
+		  </table>
+		  <!-- from page 43, Example 4.2, in book -->
+		
+<h3>Algorithm&#58;</h3>
+<code>
+	<pre>
+	Process_customer_record
+	   Get custName, purchAmt, taxCode
+		IF taxCode &#61; 0 THEN
+		  salesTax &#61; 0
+		ELSE
+		  IF taxCode &#61; 1 THEN
+		   salesTax &#61; purchAmt &#42; 0.03
+		  ELSE
+		   IF taxCode &#61; 2 THEN
+			 salesTax &#61; purchAmt &#42; 0.05
+		   ELSE
+			 salesTax&#61; purchAmt &#42; 0.07
+		   ENDIF
+		 ENDIF
+	   ENDIF
+	   totalAmt &#61; purchAmt &#43; salesTax
+	   Print custName, purchAmt, salesTax, totalDue
+	END
+	</pre>
+</code>
+
+<hr>
+	
+	<p style="text-align:center; font-size:12px;"><span style="color:#077A4A">
+		This page passes HTML and CSS validation services and Web Accessibility Checker</span></p>
+	<p style="text-align:center;"><img src="../images/HTML5_Validation.png" 
+			alt="W3C Markup Validation Service (passed)" usemap="#HTML5Val" style="width:76px; height:86px;" />
+      <map name="HTML5Val">
+        <area shape="rect" coords="3,3,72,87" href="http://validator.w3.org/#validate_by_upload" 
+        	alt="W3C Markup Validation Service" target="new">
+      </map>
+      	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <img src="../images/200px-W3C_valid_svg.png" 
+			alt="W3C CSS Validation (passed)" usemap="#CSSVal" style="width:86px; height:43px;" />
+          <map name="CSSVal">
+            <area shape="rect" coords="0,2,84,42" href="http://www.css-validator.org/#validate_by_upload" 
+            alt="Link to W3C CSS Validation" target="new">
+          </map>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="../images/checker_logo.png" alt="AChecker logo" width="200" height="43" usemap="#AChecker">
+          <map name="AChecker">
+            <area shape="rect" coords="3,3,195,42" href="http://achecker.ca/checker/index.php" 
+            alt="Link to AChecker http://achecker.ca/checker/index.php (opens in new window)" target="new">
+          </map>
+	</p>
+	<p style="text-align:center; font-size:12px; font-style:italic;">&#169; 2014, 2015 NGTC<br />
+		CIST 1305&#59; PLong &#40;sblair 08-12-2014, updated 07-30-2015&#41;</p>
+		
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!-- 1305/Program 2-11.html for PLong; (created by sblair 08-08-2014) -->
+<!-- Program 2-11.html passed the W3C Markup Validation Service 08-18-2014 -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Program 2-11 (1305)</title>
+<style type="text/css"> <!-- styling -->
+body {
+	margin-left: 20px;
+}
+h1 {
+	margin-left: 24px;
+	font-size: 28px;
+}
+h2 {
+	margin-left: 24px;
+	font-size: 26px;
+}
+h3 {
+	margin-left: 24px;
+	font-size: 22px;
+}
+h4 {
+	margin-left: 24px;
+	font-size: 20px;
+}
+p {
+	margin-left: 28px;
+	font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CIST 1305</h1>
+<h2>Program 2-11, page 54</h2>
+	<p>A program to calculate how much the initial deposit should be,<br />
+		with any given percentage rate, for any given number of years,<br />
+		to acquire a given amount of money.</p>
+	<p>Click on Enter &#38; Calculate to demonstrate the prompt box.</p>
+	<p>Run as is&#59; also try running with a different input values.</p>
+	
+<h3>Results&#58;</h3>
+
+	<p><button onclick="myFunction()">Enter &#38; Calculate</button></p>
+	<p id="demo"></p>
+	
+<script type="text/javascript">
+
+function myFunction() {
+    var futureValue = parseFloat(prompt("Enter the desired future value.", "10000"));
+	futurevalue = futureValue
+	var rate = parseFloat(prompt("Enter the annual interest rate.", "0.05"));
+	var years = parseFloat(prompt("How many years will you let the money grow?", "10"));
+	var divisor = Math.pow(1 + rate, years);
+	presentValue = futureValue / divisor;
+	presentValue = Math.round(presentValue * 1.0);
+    if (futureValue != null) {
+        document.getElementById("demo").innerHTML =
+        "You need to deposit $" + presentValue + " to attain your $" + futureValue + " goal.";
+    }
+}
+
+</script>
+
+<h4>Pseudocode, page 54&#58;</h4>
+	<p>1 Display "Enter the desired future value."<br />
+		2 Input futureValue<br />
+		3 Display "Enter the annual interest rate."<br />
+		4 Input rate<br />
+		5 Display "How many years will you let the money grow?"<br />
+		6 Input years<br />
+		7 Set presentValue = futureValue / (1 + rate)^years<br />
+		8 Display "You will need to deposit $", presentValue</p>
+
+<h4>Expected Program Output (with Input Shown in Bold)&#58;</h4>
+	<p>Enter the desired future value.<br />
+		<strong>10000</strong> [Enter]<br />
+		Enter the annual interest rate.<br />
+		<strong>0.05</strong> [Enter]<br />
+		How many years will you let the money grow?<br />
+		<strong>10</strong> [Enter]<br />
+		You need to deposit $6139</p>
+	
+<div class="footer">
+<p style="text-align: center; font-size:14px; font-style:italic; color:#004890;">Today&#39;s Date&#58;&nbsp;
+<script>
+// this JavaScript pulls the current date and displays it on the web page...
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='004890'>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</font>")
+
+</script></p>
+	<p style="font-size:12px;"><span style="color:#077A4A">This page passes HTML and CSS validation services and Web Accessibility Checker</span></p>
+	<p><img src="../images/HTML5_Validation.png" 
+			alt="W3C Markup Validation Service (passed)" usemap="#HTML5Val" style="width:76px; height:86px;" />
+      <map name="HTML5Val">
+        <area shape="rect" coords="3,3,72,87" href="http://validator.w3.org/#validate_by_upload" 
+        	alt="W3C Markup Validation Service" target="new">
+      </map>
+      	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <img src="../images/200px-W3C_valid_svg.png" 
+			alt="W3C CSS Validation (passed)" usemap="#CSSVal" style="width:86px; height:43px;" />
+          <map name="CSSVal">
+            <area shape="rect" coords="0,2,84,42" href="http://www.css-validator.org/#validate_by_upload" 
+            alt="Link to W3C CSS Validation" target="new">
+          </map>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="../images/checker_logo.png" alt="AChecker logo" width="200" height="43" usemap="#AChecker">
+          <map name="AChecker">
+            <area shape="rect" coords="3,3,195,42" href="http://achecker.ca/checker/index.php" 
+            alt="Link to AChecker http://achecker.ca/checker/index.php (opens in new window)" target="new">
+          </map>
+	</p>
+	<p style="font-size:12px; font-style: italic;">&#169; 2014 NGTC<br />
+		CIST 1305&#59; PLong &#40;sblair 08-08-2014&#41;</p>
+<!-- end .footer --></div>
+					
+</body>
+</html>
