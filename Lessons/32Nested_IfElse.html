@@ -264,7 +264,7 @@ td {
 &lt;script type="text/javascript"&gt;<br />
 				function show_prompt() {<br />
 					var custName=prompt("Please enter the customer's name.");<br />
-					var purchAmt=prompt("Please enter the purchase price. Do not input a dollar sign.")*1;<br />
+					var purchAmt=parseFloat(prompt("Please enter the purchase price. Do not input a dollar sign."));<br />
 					var taxCode=prompt("Please enter the customer tax code.");<br />
 					var totalDue=purchAmt+salesTax;<br />
 				if taxCode=0 {<br /> 
