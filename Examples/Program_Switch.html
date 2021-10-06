@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Program Switch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<style> <!-- styling -->
+body {
+	margin-left: 20px;
+}
+h1 {
+	margin-left: 20px;
+	font-size: 28px;
+}
+h2 {
+	margin-left: 20px;
+	font-size: 26px;
+}
+h3 {
+	margin-left: 20px;
+	font-size: 22px;
+}
+h4 {
+	margin-left: 20px;
+	font-size: 20px;
+}
+p {
+	margin-left: 28px;
+	font-size: 18px;
+}
+</style>
+</head>
+
+<body style = "background-color:MediumSeaGreen;">
+
+<h1>CIST 1305</h1>
+<h2>Program Switch Example</h2>
+	<p>A program that uses If Else, Swith, and Loop to display a message depending on user input.</p>
+	<p>Click on RUN to demonstrate the prompt box.</p>	
+	<p>&nbsp;</p>
+	
+<h3>Convert Number Grade to Letter Grade</h3>
+	<p>Enter your number grade to see your letter grade.</p>
+	<p>Program will give three answers&#58;<br />
+		First answer uses If Else Statement<br />
+		Second answer uses a Switch<br />
+		Third answer uses a For Loop</p>
+	<p>This program is also a good example of Operators&#58;<br />
+		because the program uses the operators &#62;&#61; and &#60;&#61;<br >
+		&#40;greater&#45;than or equal to and less&#45;than or equal to&#41;<br />
+		to determine the value of the number entered.</p>
+		
+<h3>Results&#58;</h3>
+
+<script>
+// javascript comment: one line
+/* JavaScript comment: multi-line */
+
+function show_prompt() {grade=prompt("Please enter the number grade.", " ")
+// begin function code
+// tells program to prompt for a number grade, "grade" then becomes the variable
+
+if (grade>=90)
+// defines condition of grade: if grade is greater than or equal to 90 - this gives the program a place to start
+  {
+  // begin if function code nested in prompt box
+  
+  document.getElementById("IfElse").innerHTML="IfElse run: Well done! You made an A.";
+
+  // if condition is true message will be displayed with "A" grade
+  
+  }
+  // end if function
+	else if (grade>=80 && grade<=89)
+	// if the "if" condition is not true then the program will asses if this second condition is true
+
+	{
+	document.getElementById("IfElse").innerHTML="IfElse run: Pretty good: you made a B."; 
+	// if condition is true then message for "B" grade will be displayed
+	}
+
+	
+	else if (grade>=70 && grade<=79)
+	// if first two conditions are not true then progeam will asses this third condition
+	{
+	document.getElementById("IfElse").innerHTML="IfElse run: You need to try harder: you made a C.";  
+	// if condition is true then message for grade "C" will be displayed
+	}
+	
+	else if (grade>=60 && grade<=69)
+	// if first three conditions are not true then progeam will asses this fourth condition
+	{
+	document.getElementById("IfElse").innerHTML="IfElse run: Retake class: you made a D."; 
+	// if condition is true then message for grade "C" will be displayed
+	}
+	
+	else 
+	// this is the default if the first four conditions are not true
+	{
+	document.getElementById("IfElse").innerHTML="IfElse run: You defered your success: You need to take this class again."; 
+	// if none of the conditions above are true then message for grade "C" will be displayed
+	}
+	
+	switch (true)
+	/* this tells the program to run a switch: 
+	this is similar to if else: whichever case is true the program then does a specific thing */ 
+
+{
+// begin switch for cases
+
+	case (grade>=90):
+	// in the event that the grade is greater than 90, then...
+	
+	document.getElementById("Switch").innerHTML="Switch run: Congratulations! Your grade is an A.";
+	// message will be displayed for an "A"
+	
+	break;
+	
+	case (grade>=80 && grade<90):
+	// in the event that the grade is greater than 80 and less than 90, then...
+	
+	document.getElementById("Switch").innerHTML="Switch run: Pretty good! Your grade is a B.";
+	// message will be displayed for an "B"
+	break;
+	
+	case (grade>=70 && grade<80):
+	// in the event that the grade is greater than 70 and less than 80, then...
+	
+	document.getElementById("Switch").innerHTML="Switch run: Your grade is a C.";
+	// message will be displayed for an "C"
+	
+	break;
+	
+	case (grade>=60 && grade<70):
+	// in the event that the grade is greater than 60 and less than 70, then...
+	
+	document.getElementById("Switch").innerHTML="Switch run: Oops! Your grade is a D";
+	// message will be displayed for an "D"
+	break;
+	
+	case (grade<60):
+	// in the event that the grade isless than 60, then...
+	
+	document.getElementById("Switch").innerHTML="Switch run: Your grade is an F.";
+}	// message will be displayed for an "F"
+
+
+// end switch for cases
+
+// now begins the loop function
+	for (i=100; i>=grade; i-=11)
+	/* i defines the starting point of 100, proram will loop until the i is no longer greater than or equal to the grade,
+		when condition is no longer true then program will move to next condition */	
+	{document.getElementById("Loop").innerHTML="Loop: Your letter grade is an A";}
+	// message to be displayed if grade condition is greater than or equal to 100
+	
+	for (i=89; i>=grade; i-=10)
+	/* i defines the starting point of 89, proram will loop until the i is no longer greater than or equal to the grade,
+		when condition is no longer true then program will move to next condition */
+		
+	{document.getElementById("Loop").innerHTML="Loop: Your letter grade is a B";}
+	// message to be displayed if grade condition is greater than or equal to 89 but less than 80
+	
+	for (i=79; i>=grade; i-=10)
+	/* i defines the starting point of 79, proram will loop until the i is no longer greater than or equal to the grade
+		when condition is no longer true then program will move to next condition  */
+	
+	{document.getElementById("Loop").innerHTML="Loop: Your letter grade is a C";}
+	// message to be displayed if grade condition is greater than or equal to 79 but less than 70
+	
+	for (i=69; i>=grade; i-=10)
+	/* i defines the starting point of 69, proram will loop until the i is no longer greater than or equal to the grade
+		when condition is no longer true then program will move to next condition  */
+	
+	{document.getElementById("Loop").innerHTML="Loop: Your letter grade is a D";}
+	// message to be displayed if grade condition is greater than or equal to 69 but less than 60
+	
+	for (i=59; i>=grade; i-=59)
+	/* i defines the starting point of 59, proram will loop until the i is no longer greater than or equal to the grade
+		when condition is no longer true then program will move to next condition  */
+	
+	{document.getElementById("Loop").innerHTML="Loop grade: Your letter grade is an F";}
+	// default message to be displayed if grade condition is equal to or less than 59
+	
+}
+// end all functions
+
+// end javaScript	
+</script>
+
+	<p><input type="button" class="btn btn-warning" onClick="show_prompt()" value="RUN" /></p>
+	<!-- creates a button that calls the function: the trigger to run event: click on button -->
+
+	<p id="IfElse" class="body_text"> </p>
+	<!-- this defines the id element for "IfElse" -->
+
+	<p id="Switch" class="body_text"> </p>
+	<!-- this defines the id element for "Switch" -->
+
+	<p id="Loop" class="body_text"> </p>
+	<!-- this defines the id element for "Loop" -->
+		
+<footer>
+<p style="text-align: center; font-size:14px; font-style:italic; color:#004890;">Today&#39;s Date&#58;&nbsp;
+<script>
+// this JavaScript pulls the current date and displays it on the web page...
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='004890'>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</font>")
+
+</script></p>
+		<p style="font-size:12px; font-style: italic;">&#169; 2021 LongFox Heavy Industries</p>
+<!-- end .footer --></footer>
+					
+</body>
+</html>
+
