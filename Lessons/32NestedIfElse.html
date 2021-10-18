@@ -252,7 +252,7 @@ td {
 <br>
 &lt;body&gt;<br>
 <br>
-&lt;script type="text/javascript"&gt;<br>
+&lt;script&gt;<br>
 				function show_prompt() {<br>
 					var custName=prompt("Please enter the customer's name.");<br>
 					var purchAmt=prompt("Please enter the purchase price. Do not input a dollar sign.")*1;<br>
@@ -270,11 +270,15 @@ td {
 				else if (taxCode=3) {<br>
 					var salesTax=purchAmt*.07<br>
 				}<br>
-				document.getElementById("show_prompt").innerHTML="Name: " custName + "Purchase Amount: " + purchAmt + "Sales Tax: " + salesTax + "Total Due: " + (purchAmt+salesTax);<br>
+				document.getElementById("demo").innerHTML="Name: " custName + "Purchase Amount: " + purchAmt + "Sales Tax: " + salesTax + "Total Due: " + (purchAmt+salesTax);<br>
 				}	<br>
 <br>
 &lt;/script&gt;<br>
+	
 &lt;/body&gt;<br>
+<input type="button" onclick="show_prompt()" value="Click Me">
+    <p id="showprmpt"></p>
+	
 &lt;/html&gt;<br>
 </code>
 		<p>&nbsp;Try it!!</p></td> 
