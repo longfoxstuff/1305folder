@@ -258,10 +258,10 @@ td {
 					var purchAmt=prompt("Please enter the purchase price. Do not input a dollar sign.")*1;<br>
 					var taxCode=prompt("Please enter the customer tax code.");<br>
 					var totalDue=purchAmt+salesTax;<br>
-				if taxCode=0 {<br> 
+				if (taxCode=0) {<br> 
 					var salesTax=purchAmt*0<br> 
 					}<br>
-				else if taxCode=1 {<br>
+				else if (taxCode=1) {<br>
 					var salesTax=purchAmt*.03<br>
 				}<br>
 				else if (taxCode=2) {<br>
